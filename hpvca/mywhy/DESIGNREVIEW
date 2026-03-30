@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Why Campaign — Design Review</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Trebuchet MS', sans-serif; background: #f0eef4; color: #000; }
+  .header {
+    background: #fff;
+    padding: 32px 40px;
+    border-bottom: 3px solid #D8D5EA;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header h1 { font-size: 1.2rem; color: #914193; margin-bottom: 4px; }
+  .header p { font-size: 0.8rem; color: #595959; }
+  .header .cta { font-size: 0.8rem; color: #914193; font-weight: bold; margin-top: 6px; }
+
+  .option {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 40px;
+    border-bottom: 1px solid #D8D5EA;
+  }
+  .option:last-of-type { border-bottom: none; }
+  .option-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #914193;
+    margin-bottom: 8px;
+  }
+  .option h2 { font-size: 1.1rem; color: #000; margin-bottom: 8px; }
+  .option .desc { font-size: 0.85rem; color: #595959; margin-bottom: 24px; line-height: 1.6; }
+
+  .views { display: flex; gap: 24px; align-items: flex-start; }
+  .view-desktop { flex: 1; }
+  .view-mobile { width: 180px; flex-shrink: 0; }
+  .view-label { font-size: 0.65rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; color: #914193; margin-bottom: 8px; }
+  .view-desktop img, .view-mobile img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #D8D5EA;
+    display: block;
+  }
+
+  .footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 40px 64px;
+  }
+  .footer h2 { font-size: 1rem; color: #914193; margin-bottom: 16px; }
+  .footer ol { padding-left: 20px; font-size: 0.85rem; color: #595959; line-height: 2; }
+  .footer .note { font-size: 0.75rem; color: #595959; margin-top: 24px; padding-top: 16px; border-top: 1px solid #D8D5EA; }
+
+  @media (max-width: 768px) {
+    .header { padding: 24px 20px; }
+    .option { padding: 32px 20px; }
+    .views { flex-direction: column; }
+    .view-mobile { width: 120px; }
+    .footer { padding: 32px 20px 48px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>My Why Campaign — Design Review</h1>
+  <p>HPV Cancers Alliance | Jeannie Joshi | March 2026</p>
+  <p class="cta">Select a direction to move to final delivery.</p>
+</div>
+
+<div class="option">
+  <div class="option-label">Option 2</div>
+  <h2>Dark Split-Panel</h2>
+  <p class="desc">Cinematic dark hero with featured film and 3×2 interview grid. Standard 16:9 YouTube embeds. Lightest build path.</p>
+  <div class="views">
+    <div class="view-desktop">
+      <div class="view-label">Desktop</div>
+      <img src="option-2-dark-split-desktop.png" alt="Option 2 Desktop">
+    </div>
+    <div class="view-mobile">
+      <div class="view-label">Mobile</div>
+      <img src="option-2-dark-split-mobile.png" alt="Option 2 Mobile">
+    </div>
+  </div>
+</div>
+
+<div class="option">
+  <div class="option-label">Option 3</div>
+  <h2>Lavender Editorial</h2>
+  <p class="desc">Compact hero with all seven videos visible above the fold. Full editorial panels below with cinematic stills and pull-quotes. Lavender hero.</p>
+  <div class="views">
+    <div class="view-desktop">
+      <div class="view-label">Desktop</div>
+      <img src="option-3-lavender-editorial-desktop.png" alt="Option 3 Desktop">
+    </div>
+    <div class="view-mobile">
+      <div class="view-label">Mobile</div>
+      <img src="option-3-lavender-editorial-mobile.png" alt="Option 3 Mobile">
+    </div>
+  </div>
+</div>
+
+<div class="option">
+  <div class="option-label">Option 3A</div>
+  <h2>White Editorial</h2>
+  <p class="desc">Same layout as Option 3 with a white hero. Brighter, cleaner tone.</p>
+  <div class="views">
+    <div class="view-desktop">
+      <div class="view-label">Desktop</div>
+      <img src="option-3a-white-editorial-desktop.png" alt="Option 3A Desktop">
+    </div>
+    <div class="view-mobile">
+      <div class="view-label">Mobile</div>
+      <img src="option-3a-white-editorial-mobile.png" alt="Option 3A Mobile">
+    </div>
+  </div>
+</div>
+
+<div class="option">
+  <div class="option-label">Option 4</div>
+  <h2>Dark Campaign Mosaic</h2>
+  <p class="desc">Inspired by the BMS LIVING documentary campaign. Asymmetric mosaic grid above the fold, editorial scroll below. The most cinematic direction.</p>
+  <div class="views">
+    <div class="view-desktop">
+      <div class="view-label">Desktop</div>
+      <img src="option-4-dark-mosaic-desktop.png" alt="Option 4 Desktop">
+    </div>
+    <div class="view-mobile">
+      <div class="view-label">Mobile</div>
+      <img src="option-4-dark-mosaic-mobile.png" alt="Option 4 Mobile">
+    </div>
+  </div>
+</div>
+
+<div class="option">
+  <div class="option-label">Option 4A</div>
+  <h2>White Campaign Mosaic — Sky Blue Lead</h2>
+  <p class="desc">Same mosaic layout on a white background with sky blue as the lead accent. Per HPVCA brand guidelines, blue represents gender-inclusive HPV awareness — an intentional choice for this campaign.</p>
+  <div class="views">
+    <div class="view-desktop">
+      <div class="view-label">Desktop</div>
+      <img src="option-4a-white-mosaic-desktop.png" alt="Option 4A Desktop">
+    </div>
+    <div class="view-mobile">
+      <div class="view-label">Mobile</div>
+      <img src="option-4a-white-mosaic-mobile.png" alt="Option 4A Mobile">
+    </div>
+  </div>
+</div>
+
+<div class="option">
+  <div class="option-label">Reference</div>
+  <h2>Nav Context — Options Under Live HPVCA Site</h2>
+  <p class="desc">Context view showing how each option integrates with the current HPVCA site navigation. Includes developer notes on palette alignment and implementation paths.</p>
+  <div class="views">
+    <div class="view-desktop">
+      <img src="nav-context-sketch-desktop.png" alt="Nav Context">
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Next Steps</h2>
+  <ol>
+    <li>Confirm direction</li>
+    <li>Production-ready code delivered for selected option</li>
+    <li>Bret to manage WordPress/Divi integration and platform adjustments</li>
+    <li>Team to finalize all placeholder copy (names, quotes, descriptions)</li>
+  </ol>
+  <p class="note">All options are fully responsive, QA-tested across four breakpoints (1440, 1024, 768, 375px), and built on the official HPVCA brand palette. Video placeholders are configured for direct YouTube embed swap.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Why Campaign — Option 3A</title>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  MY WHY CAMPAIGN — OPTION 3A: WHITE EDITORIAL + IIEX HERO      ║
+  ║  Layout: Same as Option 3 (IIEX hero + editorial scroll)       ║
+  ║  Palette: White/light (same as Option 1) instead of lavender   ║
+  ║  Player: Still images + lightbox overlay (Approach A)           ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║  HOW THIS DIFFERS FROM OPTION 3:                                 ║
+  ║  • Hero bg is white (#FFFFFF) instead of lavender (#D8D5EA)     ║
+  ║  • Page bg is light purple (#F5F3F9) — softer overall           ║
+  ║  • Editorial panels alternate white/black instead of using       ║
+  ║    lavender fills — cleaner, more minimal                        ║
+  ║  • Same layout, same structure, just lighter tone                ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║  PROS:                                                           ║
+  ║  • Brightest, most approachable option                           ║
+  ║  • Videos visible immediately above fold (IIEX compact hero)    ║
+  ║  • White hero feels clinical / healthcare-appropriate            ║
+  ║  • Below fold still delivers editorial depth per video           ║
+  ║  • Light bg makes purple + blue accents pop cleanly              ║
+  ║  • Full control over still images and quotes                     ║
+  ║  CONS:                                                           ║
+  ║  • Lighter palette has less cinematic drama                      ║
+  ║  • Long page — scrolling for all 7 editorial panels              ║
+  ║  • Needs still images extracted from videos                      ║
+  ║  • Lightbox adds Divi build complexity                           ║
+  ║  • Two clicks to play (click tile → lightbox)                    ║
+  ║  BEST FOR: Approachable storytelling, healthcare audience        ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║  OFFICIAL HPVCA PALETTE:                                         ║
+  ║    Lavender:  #D8D5EA | Purple: #914193 | Blue: #BDE3F9        ║
+  ║    White: #FFFFFF | Gray: #595959 | Black: #000000               ║
+  ║  Font: Trebuchet MS | 3 sizes: 2.5rem / 1rem / 0.75rem         ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<style>
+  :root {
+    --lavender: #D8D5EA; --purple: #914193; --blue: #BDE3F9;
+    --white: #FFFFFF; --gray: #595959; --black: #000000;
+    --bg: #F5F3F9;
+    --size-l: 2.5rem; --size-m: 1rem; --size-s: 0.75rem;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Trebuchet MS', sans-serif; color: var(--black); background: var(--bg); line-height: 1.6; }
+  .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 16px 32px; font-size: var(--size-s); color: var(--gray); }
+  .breadcrumb a { color: var(--purple); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb span { margin: 0 6px; opacity: 0.4; }
+
+  /* ═══════════════════════════════════════════════
+     HERO — IIEX COMPACT, WHITE BACKGROUND
+     Title left, featured video + thumbnails right
+     DEV: Divi 2-column row (40/60), white bg
+     ═══════════════════════════════════════════════ */
+  .hero {
+    background: var(--white);
+    border-bottom: 3px solid var(--lavender);
+  }
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 32px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .hero-org { font-size: var(--size-s); font-weight: bold; letter-spacing: 0.18em; text-transform: uppercase; color: var(--purple); margin-bottom: 16px; }
+  .hero-title { font-size: var(--size-l); font-weight: bold; color: var(--purple); letter-spacing: 0.06em; margin-bottom: 6px; }
+  .hero-subtitle { font-size: var(--size-m); color: var(--black); margin-bottom: 16px; }
+  .hero-line { width: 48px; height: 3px; background: var(--blue); margin-bottom: 14px; border-radius: 2px; }
+  .hero-desc { font-size: var(--size-s); color: var(--gray); line-height: 1.7; }
+
+  /* Hero right — video grid */
+  .hero-featured {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #111122;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.25);
+    font-size: var(--size-s);
+  }
+  .hero-featured .play-icon {
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 52px; height: 52px;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0.5; transition: opacity 0.3s;
+  }
+  .hero-featured:hover .play-icon { opacity: 1; }
+  .play-icon svg { width: 20px; height: 20px; margin-left: 3px; }
+  .hero-featured-label {
+    position: absolute;
+    bottom: 8px; left: 8px;
+    font-size: var(--size-s); font-weight: bold;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--white); background: var(--purple);
+    padding: 3px 10px; border-radius: 3px;
+  }
+  .hero-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-top: 6px;
+  }
+  .hero-thumb {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #111122;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.2);
+    font-size: 0.65rem;
+    transition: opacity 0.3s;
+  }
+  .hero-thumb:hover { opacity: 0.85; }
+  .thumb-label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 4px 6px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    font-size: var(--size-s);
+    color: var(--white);
+  }
+  /* Second row of thumbs — 2 items, half-width */
+  .hero-thumbs-row2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  /* ═══════════════════════════════════════════════
+     EDITORIAL SCROLL — below fold
+     Alternates white + black panels (no lavender fill)
+     ═══════════════════════════════════════════════ */
+  .scroll-intro {
+    text-align: center;
+    padding: 48px 32px 32px;
+  }
+  .scroll-intro h2 { font-size: var(--size-m); font-weight: bold; color: var(--purple); margin-bottom: 6px; }
+  .scroll-intro p { font-size: var(--size-s); color: var(--gray); }
+  .scroll-line { width: 48px; height: 3px; background: var(--purple); margin: 0 auto 14px; border-radius: 2px; }
+
+  .panel { max-width: 1200px; margin: 0 auto; padding: 8px 32px; }
+  .panel-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 360px;
+  }
+  .panel-card.dark { background: var(--black); }
+  .panel-card.light { background: var(--white); border: 1px solid var(--lavender); }
+  .panel-card.flip { direction: rtl; }
+  .panel-card.flip > * { direction: ltr; }
+
+  .panel-image {
+    position: relative;
+    background: linear-gradient(135deg, #1a1a2a, #111122);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.2); font-size: var(--size-s); cursor: pointer;
+  }
+  .panel-card.light .panel-image {
+    background: linear-gradient(135deg, #e8e4f0, #ddd8ea);
+    color: rgba(0,0,0,0.12);
+  }
+  .panel-play {
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 60px; height: 60px;
+    border: 2px solid var(--blue); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0.5; transition: opacity 0.3s;
+  }
+  .panel-image:hover .panel-play { opacity: 1; }
+  .panel-play svg { width: 22px; height: 22px; margin-left: 3px; fill: var(--blue); }
+
+  .panel-text { padding: 44px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .panel-tag { font-size: var(--size-s); font-weight: bold; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; }
+  .quote-mark { font-size: var(--size-l); line-height: 1; margin-bottom: 8px; }
+  .panel-text blockquote { font-size: var(--size-m); font-style: italic; line-height: 1.65; margin-bottom: 20px; }
+  .attr-name { font-size: var(--size-s); font-weight: bold; }
+  .attr-role { font-size: var(--size-s); }
+
+  /* Dark panel text colors */
+  .panel-card.dark .panel-tag { color: var(--blue); }
+  .panel-card.dark .quote-mark { color: var(--purple); }
+  .panel-card.dark blockquote { color: rgba(255,255,255,0.85); }
+  .panel-card.dark .attr-name { color: var(--lavender); }
+  .panel-card.dark .attr-role { color: rgba(255,255,255,0.4); }
+
+  /* Light panel text colors */
+  .panel-card.light .panel-tag { color: var(--purple); }
+  .panel-card.light .quote-mark { color: var(--purple); }
+  .panel-card.light blockquote { color: var(--black); }
+  .panel-card.light .attr-name { color: var(--purple); }
+  .panel-card.light .attr-role { color: var(--gray); }
+
+  /* CTA */
+  .cta { background: var(--black); text-align: center; padding: 56px 32px; margin-top: 8px; }
+  .cta h2 { font-size: var(--size-m); font-weight: bold; color: var(--blue); margin-bottom: 12px; }
+  .cta p { font-size: var(--size-s); color: rgba(255,255,255,0.5); margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .cta-btn { display: inline-block; padding: 12px 32px; background: var(--purple); color: var(--white); text-decoration: none; font-family: 'Trebuchet MS', sans-serif; font-size: var(--size-s); font-weight: bold; border-radius: 6px; transition: opacity 0.3s; }
+  .cta-btn:hover { opacity: 0.85; }
+
+  /* LIGHTBOX */
+  .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 9999; align-items: center; justify-content: center; }
+  .lightbox.active { display: flex; }
+  .lightbox-inner { width: 90%; max-width: 900px; aspect-ratio: 16/9; position: relative; }
+  .lightbox-inner iframe { width: 100%; height: 100%; border: none; border-radius: 6px; }
+  .lightbox-close { position: absolute; top: -36px; right: 0; background: none; border: none; color: var(--white); font-size: var(--size-m); cursor: pointer; font-family: 'Trebuchet MS', sans-serif; opacity: 0.6; }
+  .lightbox-close:hover { opacity: 1; }
+
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 24px; }
+    .hero-thumbs, .hero-thumbs-row2 { grid-template-columns: repeat(2, 1fr); }
+    .panel-card { grid-template-columns: 1fr; }
+    .panel-card.flip { direction: ltr; }
+    .panel-image { min-height: 260px; }
+  }
+  @media (max-width: 600px) {
+    .hero-inner { padding: 32px 16px; }
+    .panel { padding: 6px 16px; }
+    .panel-text { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="breadcrumb"><a href="#">Home</a><span>›</span><a href="#">News & Events</a><span>›</span>My Why Campaign</nav>
+
+<!-- ═══════════════════════════════════════════════
+     HERO — IIEX COMPACT, WHITE BACKGROUND
+     ═══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-org">HPV Cancers Alliance</div>
+      <h1 class="hero-title">MY WHY</h1>
+      <div class="hero-subtitle">Campaign</div>
+      <div class="hero-line"></div>
+      <p class="hero-desc">Real stories from patients, caregivers, and advocates — sharing why the fight against HPV-related cancers is personal.</p>
+    </div>
+    <div class="hero-videos">
+      <!-- FEATURED — IMAGE: replace with still -->
+      <div class="hero-featured" onclick="openLightbox('FEATURED_VIDEO_ID')">
+        <div class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+        <div class="hero-featured-label">Featured Film</div>
+        Featured film still
+      </div>
+      <!-- 4 interview thumbs — IMAGE: replace each -->
+      <div class="hero-thumbs">
+        <div class="hero-thumb" onclick="openLightbox('VIDEO_ID_1')"><div class="thumb-label">01</div>Interview 01</div>
+        <div class="hero-thumb" onclick="openLightbox('VIDEO_ID_2')"><div class="thumb-label">02</div>Interview 02</div>
+        <div class="hero-thumb" onclick="openLightbox('VIDEO_ID_3')"><div class="thumb-label">03</div>Interview 03</div>
+        <div class="hero-thumb" onclick="openLightbox('VIDEO_ID_4')"><div class="thumb-label">04</div>Interview 04</div>
+      </div>
+      <div class="hero-thumbs-row2">
+        <div class="hero-thumb" onclick="openLightbox('VIDEO_ID_5')"><div class="thumb-label">05</div>Interview 05</div>
+        <div class="hero-thumb" onclick="openLightbox('VIDEO_ID_6')"><div class="thumb-label">06</div>Interview 06</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDITORIAL SCROLL -->
+<div class="scroll-intro">
+  <div class="scroll-line"></div>
+  <h2>Their Stories</h2>
+  <p>Scroll to explore each voice in the campaign.</p>
+</div>
+
+<!-- FEATURED FILM — dark, image left -->
+<div class="panel"><div class="panel-card dark">
+  <div class="panel-image" onclick="openLightbox('FEATURED_VIDEO_ID')"><div class="panel-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>Featured film still</div>
+  <div class="panel-text"><div class="panel-tag">Featured Film</div><div class="quote-mark">"</div><blockquote>Placeholder for a powerful quote from the featured documentary.</blockquote><div class="attr-name">The My Why Story</div><div class="attr-role">Full-length feature</div></div>
+</div></div>
+
+<!-- INTERVIEW 01 — light, flipped -->
+<div class="panel"><div class="panel-card light flip">
+  <div class="panel-image" onclick="openLightbox('VIDEO_ID_1')"><div class="panel-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>Interview 01 still</div>
+  <div class="panel-text"><div class="panel-tag">Interview 01</div><div class="quote-mark">"</div><blockquote>Placeholder for a personal quote from this interviewee.</blockquote><div class="attr-name">Interviewee Name</div><div class="attr-role">Role · Location</div></div>
+</div></div>
+
+<!-- INTERVIEW 02 — dark -->
+<div class="panel"><div class="panel-card dark">
+  <div class="panel-image" onclick="openLightbox('VIDEO_ID_2')"><div class="panel-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>Interview 02 still</div>
+  <div class="panel-text"><div class="panel-tag">Interview 02</div><div class="quote-mark">"</div><blockquote>Placeholder for a personal quote from this interviewee.</blockquote><div class="attr-name">Interviewee Name</div><div class="attr-role">Role · Location</div></div>
+</div></div>
+
+<!-- INTERVIEW 03 — light, flipped -->
+<div class="panel"><div class="panel-card light flip">
+  <div class="panel-image" onclick="openLightbox('VIDEO_ID_3')"><div class="panel-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>Interview 03 still</div>
+  <div class="panel-text"><div class="panel-tag">Interview 03</div><div class="quote-mark">"</div><blockquote>Placeholder for a personal quote from this interviewee.</blockquote><div class="attr-name">Interviewee Name</div><div class="attr-role">Role · Location</div></div>
+</div></div>
+
+<!-- INTERVIEW 04 — dark -->
+<div class="panel"><div class="panel-card dark">
+  <div class="panel-image" onclick="openLightbox('VIDEO_ID_4')"><div class="panel-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>Interview 04 still</div>
+  <div class="panel-text"><div class="panel-tag">Interview 04</div><div class="quote-mark">"</div><blockquote>Placeholder for a personal quote from this interviewee.</blockquote><div class="attr-name">Interviewee Name</div><div class="attr-role">Role · Location</div></div>
+</div></div>
+
+<!-- INTERVIEW 05 — light, flipped -->
+<div class="panel"><div class="panel-card light flip">
+  <div class="panel-image" onclick="openLightbox('VIDEO_ID_5')"><div class="panel-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>Interview 05 still</div>
+  <div class="panel-text"><div class="panel-tag">Interview 05</div><div class="quote-mark">"</div><blockquote>Placeholder for a personal quote from this interviewee.</blockquote><div class="attr-name">Interviewee Name</div><div class="attr-role">Role · Location</div></div>
+</div></div>
+
+<!-- INTERVIEW 06 — dark -->
+<div class="panel"><div class="panel-card dark">
+  <div class="panel-image" onclick="openLightbox('VIDEO_ID_6')"><div class="panel-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>Interview 06 still</div>
+  <div class="panel-text"><div class="panel-tag">Interview 06</div><div class="quote-mark">"</div><blockquote>Placeholder for a personal quote from this interviewee.</blockquote><div class="attr-name">Interviewee Name</div><div class="attr-role">Role · Location</div></div>
+</div></div>
+
+<!-- CTA -->
+<section class="cta"><h2>Join the Movement</h2><p>Every story shared is a step toward a future without HPV-related cancers.</p><a href="#" class="cta-btn">Get Involved</a></section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)"><div class="lightbox-inner"><button class="lightbox-close" onclick="closeLightbox()">&times; Close</button><iframe id="lightbox-iframe" src="" allowfullscreen></iframe></div></div>
+<script>
+function openLightbox(id){document.getElementById('lightbox-iframe').src='https://www.youtube.com/embed/'+id+'?autoplay=1';document.getElementById('lightbox').classList.add('active');}
+function closeLightbox(e){if(e&&e.target!==e.currentTarget&&!e.target.classList.contains('lightbox-close'))return;document.getElementById('lightbox-iframe').src='';document.getElementById('lightbox').classList.remove('active');}
+</script>
+</body>
+</html>

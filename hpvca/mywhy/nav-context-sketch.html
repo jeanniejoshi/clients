@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Why Campaign — Nav Context Sketch</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Trebuchet MS', sans-serif; background: #f0eef4; color: #000; padding: 32px; }
+  h1 { font-size: 1.1rem; text-align: center; margin-bottom: 8px; color: #000; }
+  .subtitle { font-size: 0.8rem; text-align: center; color: #595959; margin-bottom: 32px; }
+  .option-label { font-size: 0.85rem; font-weight: bold; color: #914193; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.1em; }
+  .note { font-size: 0.75rem; color: #595959; background: #eae7f0; display: inline-block; padding: 4px 12px; border-radius: 4px; margin-top: 10px; margin-bottom: 36px; }
+  .frame { max-width: 960px; margin: 0 auto 40px; border: 1px solid #D8D5EA; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+
+  /* Simulated HPVCA Nav */
+  .sim-nav { background: #fff; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #eee; }
+  .sim-logo { display: flex; align-items: center; gap: 8px; }
+  .sim-logo-icon { width: 36px; height: 36px; background: #D8D5EA; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.55rem; color: #914193; font-weight: bold; }
+  .sim-logo-text { font-size: 0.7rem; color: #914193; line-height: 1.3; }
+  .sim-logo-text span { display: block; font-size: 0.55rem; color: #595959; }
+  .sim-menu { display: flex; gap: 20px; font-size: 0.7rem; color: #595959; }
+  .sim-menu .active { color: #914193; font-weight: bold; }
+  .sim-support { font-size: 0.65rem; border: 1px solid #914193; color: #914193; padding: 5px 14px; border-radius: 20px; }
+  .sim-subnav { background: #fff; padding: 6px 28px; font-size: 0.65rem; color: #595959; display: flex; gap: 18px; border-bottom: 1px solid #eee; }
+  .sim-subnav .active { color: #914193; font-weight: bold; }
+  .sim-dropdown { position: relative; }
+  .sim-dropdown::after { content: ' ▾'; }
+  .sim-dd-item { position: absolute; top: 16px; left: 0; background: #F5F3F9; border: 1px solid #D8D5EA; border-radius: 3px; padding: 4px 10px; font-size: 0.6rem; color: #914193; white-space: nowrap; font-weight: bold; }
+
+  /* Option 2: Dark */
+  .opt2-hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 320px; }
+  .opt2-text { background: #000; padding: 40px 36px; display: flex; flex-direction: column; justify-content: center; }
+  .opt2-org { font-size: 0.6rem; font-weight: bold; letter-spacing: 0.15em; text-transform: uppercase; color: #D8D5EA; margin-bottom: 20px; }
+  .opt2-title { font-size: 2rem; font-weight: bold; color: #BDE3F9; letter-spacing: 0.06em; margin-bottom: 6px; }
+  .opt2-sub { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 16px; }
+  .opt2-line { width: 40px; height: 2px; background: #914193; margin-bottom: 14px; }
+  .opt2-desc { font-size: 0.7rem; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 280px; }
+  .opt2-video { background: linear-gradient(135deg, #0a0a14, #111125); display: flex; align-items: center; justify-content: center; position: relative; }
+  .opt2-play { width: 48px; height: 48px; border: 2px solid #BDE3F9; border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0.5; }
+  .opt2-play svg { width: 18px; height: 18px; margin-left: 3px; fill: #BDE3F9; }
+  .opt2-badge { position: absolute; bottom: 12px; left: 12px; font-size: 0.55rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.08em; color: #fff; background: #914193; padding: 3px 10px; border-radius: 3px; }
+
+  /* Option 3A: White IIEX */
+  .opt3a-bar { height: 4px; background: #BDE3F9; }
+  .opt3a-hero { display: grid; grid-template-columns: 2fr 3fr; gap: 28px; padding: 36px 28px; background: #fff; align-items: center; }
+  .opt3a-org { font-size: 0.6rem; font-weight: bold; letter-spacing: 0.15em; text-transform: uppercase; color: #914193; margin-bottom: 12px; }
+  .opt3a-title { font-size: 1.8rem; font-weight: bold; color: #914193; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .opt3a-sub { font-size: 0.85rem; color: #000; margin-bottom: 12px; }
+  .opt3a-line { width: 40px; height: 2px; background: #BDE3F9; margin-bottom: 10px; }
+  .opt3a-desc { font-size: 0.7rem; color: #595959; line-height: 1.7; }
+  .opt3a-featured { background: #111122; border-radius: 5px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; position: relative; }
+  .opt3a-featured .badge { position: absolute; bottom: 6px; left: 6px; font-size: 0.5rem; font-weight: bold; text-transform: uppercase; color: #fff; background: #914193; padding: 2px 8px; border-radius: 3px; }
+  .opt3a-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin-top: 4px; }
+  .opt3a-thumb { background: #111122; border-radius: 3px; aspect-ratio: 16/9; }
+  .opt3a-thumbs2 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin-top: 4px; }
+
+  /* Option 4A: White Mosaic */
+  .opt4a-bar { height: 5px; background: #BDE3F9; }
+  .opt4a-mosaic { background: #F5F3F9; padding: 28px; }
+  .opt4a-header { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 8px; align-items: end; }
+  .opt4a-org { font-size: 0.6rem; font-weight: bold; letter-spacing: 0.15em; text-transform: uppercase; color: #914193; margin-bottom: 8px; }
+  .opt4a-title { font-size: 1.8rem; font-weight: bold; color: #000; display: inline-block; border-bottom: 3px solid #BDE3F9; padding-bottom: 6px; margin-bottom: 8px; }
+  .opt4a-sub { font-size: 0.8rem; color: #595959; margin-bottom: 8px; }
+  .opt4a-featured { background: #D8D5EA; border: 2px solid #BDE3F9; border-radius: 5px; min-height: 150px; display: flex; align-items: center; justify-content: center; color: #595959; font-size: 0.7rem; position: relative; }
+  .opt4a-line { height: 2px; background: #BDE3F9; margin-bottom: 6px; }
+  .opt4a-row { display: grid; gap: 5px; height: 100px; margin-bottom: 5px; }
+  .opt4a-row.r1 { grid-template-columns: 2fr 2fr 1.5fr; }
+  .opt4a-row.r2 { grid-template-columns: 2.5fr 1.8fr 1.5fr; }
+  .opt4a-tile { background: #D8D5EA; border-radius: 3px; display: flex; align-items: center; justify-content: center; color: #595959; font-size: 0.65rem; }
+
+  .section-break { max-width: 960px; margin: 0 auto; padding: 32px 0; }
+  .observations { max-width: 960px; margin: 0 auto 32px; padding: 28px; background: #fff; border-radius: 8px; border: 1px solid #D8D5EA; }
+  .observations h2 { font-size: 0.9rem; color: #914193; margin-bottom: 14px; }
+  .observations p { font-size: 0.75rem; color: #595959; line-height: 1.7; margin-bottom: 10px; }
+  .observations strong { color: #000; }
+</style>
+</head>
+<body>
+
+<h1>My Why Campaign — How Options Sit Under the Live HPVCA Nav</h1>
+<p class="subtitle">Design context sketches by Jeannie Joshi | March 2026</p>
+
+<!-- OPTION 2 -->
+<div class="option-label">Option 2 — Dark Split-Panel</div>
+<div class="frame">
+  <div class="sim-nav">
+    <div class="sim-logo"><div class="sim-logo-icon">HPVCA</div><div class="sim-logo-text">HPV Cancers Alliance<span>Spread Knowledge. Save Lives.</span></div></div>
+    <div class="sim-menu"><span>Home</span><span>Human Papillomavirus</span><span>Prevention</span><span>Cancer Treatments</span></div>
+    <div class="sim-support">Support Us!</div>
+  </div>
+  <div class="sim-subnav"><span>Soirée in the City</span><span class="sim-dropdown active">News & Events<div class="sim-dd-item">My Why Campaign</div></span><span>About Us</span><span>Resources</span></div>
+  <div class="opt2-hero">
+    <div class="opt2-text"><div class="opt2-org">HPV Cancers Alliance</div><div class="opt2-title">MY WHY</div><div class="opt2-sub">Campaign</div><div class="opt2-line"></div><div class="opt2-desc">Real stories from patients, caregivers, and advocates — sharing why the fight against HPV-related cancers is personal.</div></div>
+    <div class="opt2-video"><div class="opt2-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div><div class="opt2-badge">Featured Film</div></div>
+  </div>
+</div>
+<div class="note">Dark creates a hard cinematic cut below the white nav — dramatic, intentional</div>
+
+<!-- OPTION 3A -->
+<div class="option-label">Option 3A — White Editorial (IIEX Hero)</div>
+<div class="frame">
+  <div class="sim-nav">
+    <div class="sim-logo"><div class="sim-logo-icon">HPVCA</div><div class="sim-logo-text">HPV Cancers Alliance<span>Spread Knowledge. Save Lives.</span></div></div>
+    <div class="sim-menu"><span>Home</span><span>Human Papillomavirus</span><span>Prevention</span><span>Cancer Treatments</span></div>
+    <div class="sim-support">Support Us!</div>
+  </div>
+  <div class="sim-subnav"><span>Soirée in the City</span><span class="active">News & Events ▾</span><span>About Us</span><span>Resources</span></div>
+  <div class="opt3a-bar"></div>
+  <div class="opt3a-hero">
+    <div><div class="opt3a-org">HPV Cancers Alliance</div><div class="opt3a-title">MY WHY</div><div class="opt3a-sub">Campaign</div><div class="opt3a-line"></div><div class="opt3a-desc">Real stories from patients, caregivers, and advocates — sharing why the fight against HPV-related cancers is personal.</div></div>
+    <div>
+      <div class="opt3a-featured"><div class="opt2-play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div><div class="badge">Featured Film</div></div>
+      <div class="opt3a-thumbs"><div class="opt3a-thumb"></div><div class="opt3a-thumb"></div><div class="opt3a-thumb"></div><div class="opt3a-thumb"></div></div>
+      <div class="opt3a-thumbs2"><div class="opt3a-thumb"></div><div class="opt3a-thumb"></div></div>
+    </div>
+  </div>
+</div>
+<div class="note">White flows naturally from the nav — sky blue bar signals "campaign page starts here"</div>
+
+<!-- OPTION 4A -->
+<div class="option-label">Option 4A — White Campaign Mosaic (Sky Blue Lead)</div>
+<div class="frame">
+  <div class="sim-nav">
+    <div class="sim-logo"><div class="sim-logo-icon">HPVCA</div><div class="sim-logo-text">HPV Cancers Alliance<span>Spread Knowledge. Save Lives.</span></div></div>
+    <div class="sim-menu"><span>Home</span><span>Human Papillomavirus</span><span>Prevention</span><span>Cancer Treatments</span></div>
+    <div class="sim-support">Support Us!</div>
+  </div>
+  <div class="sim-subnav"><span>Soirée in the City</span><span class="active">News & Events ▾</span><span>About Us</span><span>Resources</span></div>
+  <div class="opt4a-bar"></div>
+  <div class="opt4a-mosaic">
+    <div class="opt4a-header">
+      <div><div class="opt4a-org">HPV Cancers Alliance</div><div class="opt4a-title">MY WHY</div><div class="opt4a-sub">Campaign</div></div>
+      <div class="opt4a-featured">Featured film still</div>
+    </div>
+    <div class="opt4a-line"></div>
+    <div class="opt4a-row r1"><div class="opt4a-tile">01</div><div class="opt4a-tile">02</div><div class="opt4a-tile">03</div></div>
+    <div class="opt4a-row r2"><div class="opt4a-tile">04</div><div class="opt4a-tile">05</div><div class="opt4a-tile">06</div></div>
+  </div>
+</div>
+<div class="note">Light mosaic + blue accent bar feels elevated — becomes the best page on the site</div>
+
+<!-- OBSERVATIONS -->
+<div class="observations">
+  <h2>Notes for Bret / Development</h2>
+  <p><strong>Nav inheritance:</strong> The My Why page will automatically inherit the existing HPVCA header and footer through WordPress/Divi. Our code does not include a nav — it starts where the nav ends.</p>
+  <p><strong>Palette mismatch:</strong> The current site uses a darker maroon-wine purple (~#4a0e2a range) for hero banners. The official HPVCA brand guide specifies #914193 (Pantone 259C). Our code uses the official palette. If the team wants to match the existing site purple instead, it's a single CSS variable swap: <code>--purple: #4a0e2a;</code>. Recommendation: keep the official palette and let the My Why page set the standard for the site refresh.</p>
+  <p><strong>Integration:</strong> Two paths — (1) use these HTML files as visual reference and rebuild natively in Divi 5, or (2) paste the code directly into Divi Code Modules for faster launch. CSS variables, responsive breakpoints, and lightbox JS all work standalone.</p>
+</div>
+
+</body>
+</html>

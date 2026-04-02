@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Why Campaign — Option 2</title>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  MY WHY CAMPAIGN — OPTION 2: DARK SPLIT-PANEL                  ║
+  ║  Layout: Dark hero (title left, video right) + 16:9 grid       ║
+  ║  Mood: Cinematic, bold, documentary                             ║
+  ║  Player: Direct YouTube 16:9 embeds (Approach B)                ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║                                                                  ║
+  ║  PROS:                                                           ║
+  ║  • Strong visual impact — dark bg makes videos pop              ║
+  ║  • Split hero gives the featured film prime real estate          ║
+  ║  • Direct YouTube embeds — simple build, one-click play         ║
+  ║  • Documentary / campaign tone from the first scroll             ║
+  ║  • Featured film is visually distinct from interview grid        ║
+  ║                                                                  ║
+  ║  CONS:                                                           ║
+  ║  • Dark palette may feel heavy for healthcare audience           ║
+  ║  • Uniform 16:9 interview grid — less editorial variety          ║
+  ║  • No text overlay on video stills                               ║
+  ║  • YouTube branding visible on all embeds                        ║
+  ║                                                                  ║
+  ║  BEST FOR: Bold first impression, documentary feel               ║
+  ║                                                                  ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║  DESIGN SYSTEM                                                   ║
+  ║  Font: Trebuchet MS, sans-serif                                  ║
+  ║  Sizes: --size-l: 2.5rem | --size-m: 1rem | --size-s: 0.75rem  ║
+  ║  Palette:                                                        ║
+  ║    Magenta:  #8b2d8b (accent lines, tags, dividers)             ║
+  ║    Lavender: #c9b8d8 (org label, soft text on dark)             ║
+  ║    Sky Blue: #9dcef0 (hero title, CTA heading)                  ║
+  ║    Dark:     #1e1e3a (hero bg, footer bg)                        ║
+  ║    Light BG: #f9f7fc (interview section bg)                      ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<style>
+  :root {
+    --magenta: #8b2d8b;
+    --lavender: #c9b8d8;
+    --lavender-light: #ede7f3;
+    --sky: #9dcef0;
+    --dark: #1e1e3a;
+    --text: #2a2a3d;
+    --text-light: #6b6b80;
+    --bg: #f9f7fc;
+    --white: #ffffff;
+    --size-l: 2.5rem;
+    --size-m: 1rem;
+    --size-s: 0.75rem;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Trebuchet MS', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+
+  .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 16px 32px; font-size: var(--size-s); color: var(--text-light); }
+  .breadcrumb a { color: var(--magenta); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb span { margin: 0 6px; opacity: 0.4; }
+
+  /* SECTION 1: DARK SPLIT-PANEL HERO
+     DEV: Divi 2-column row (50/50), dark background */
+  .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--dark);
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 440px;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 52px 48px;
+  }
+  .hero-org {
+    font-size: var(--size-s);
+    font-weight: bold;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lavender);
+    margin-bottom: 28px;
+  }
+  .hero-title {
+    font-size: var(--size-l);
+    font-weight: bold;
+    color: var(--sky);
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  .hero-subtitle {
+    font-size: var(--size-m);
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 24px;
+  }
+  .hero-line {
+    width: 48px;
+    height: 3px;
+    background: var(--magenta);
+    margin-bottom: 20px;
+    border-radius: 2px;
+  }
+  .hero-desc {
+    font-size: var(--size-s);
+    color: rgba(255,255,255,0.45);
+    line-height: 1.75;
+    max-width: 340px;
+  }
+  .hero-video {
+    position: relative;
+    background: #0f0f1f;
+  }
+  .hero-video iframe,
+  .hero-video .placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e1e3a, #2a2a50);
+    color: rgba(255,255,255,0.3);
+    font-size: var(--size-s);
+    gap: 12px;
+  }
+  .play-icon {
+    width: 56px; height: 56px;
+    border: 2px solid var(--sky);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0.5;
+  }
+  .play-icon svg { width: 20px; height: 20px; margin-left: 3px; }
+  .hero-video-label {
+    position: absolute;
+    bottom: 14px; left: 14px;
+    font-size: var(--size-s);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    background: var(--magenta);
+    padding: 4px 12px;
+    border-radius: 4px;
+    z-index: 2;
+  }
+
+  /* FEATURED INFO BAR
+     DEV: Divi Text Module below hero */
+  .featured-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 32px 0;
+  }
+  .featured-info {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 24px 32px;
+    border: 1px solid var(--lavender-light);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .featured-tag {
+    font-size: var(--size-s);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--magenta);
+    padding-top: 3px;
+    white-space: nowrap;
+  }
+  .featured-info h2 { font-size: var(--size-m); font-weight: bold; color: var(--dark); margin-bottom: 4px; }
+  .featured-info p { font-size: var(--size-s); color: var(--text-light); line-height: 1.65; max-width: 600px; }
+
+  /* INTERVIEW GRID
+     DEV: Divi 3-column rows with Video + Text Modules */
+  .interviews { max-width: 1200px; margin: 0 auto; padding: 56px 32px 80px; }
+  .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 36px; padding-bottom: 16px; border-bottom: 1px solid var(--lavender-light); }
+  .section-header h2 { font-size: var(--size-m); font-weight: bold; color: var(--dark); }
+  .section-header p { font-size: var(--size-s); color: var(--text-light); }
+  .interview-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .interview-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--lavender-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .interview-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+  .interview-video { position: relative; padding-bottom: 56.25%; background: var(--dark); }
+  .interview-video iframe, .interview-video .placeholder { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .interview-video .play-icon { width: 44px; height: 44px; }
+  .interview-video .play-icon svg { width: 16px; height: 16px; }
+  .interview-body { padding: 16px 18px 20px; }
+  .interview-number { font-size: var(--size-s); font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; color: var(--magenta); margin-bottom: 4px; }
+  .interview-body h3 { font-size: var(--size-m); font-weight: bold; color: var(--dark); margin-bottom: 4px; }
+  .interview-body p { font-size: var(--size-s); color: var(--text-light); line-height: 1.6; }
+
+  /* CTA */
+  .cta { background: var(--dark); text-align: center; padding: 56px 32px; }
+  .cta h2 { font-size: var(--size-m); font-weight: bold; color: var(--sky); margin-bottom: 12px; }
+  .cta p { font-size: var(--size-s); color: rgba(255,255,255,0.5); margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .cta-btn { display: inline-block; padding: 12px 32px; background: var(--magenta); color: var(--white); text-decoration: none; font-family: 'Trebuchet MS', sans-serif; font-size: var(--size-s); font-weight: bold; border-radius: 6px; transition: opacity 0.3s; }
+  .cta-btn:hover { opacity: 0.85; }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+    .hero-text { padding: 40px 28px; }
+    .hero-video { min-height: 300px; }
+    .interview-grid { grid-template-columns: repeat(2, 1fr); }
+    .featured-info { flex-direction: column; gap: 8px; }
+    .section-header { flex-direction: column; gap: 6px; }
+  }
+  @media (max-width: 600px) {
+    .hero, .featured-bar, .interviews { padding-left: 16px; padding-right: 16px; }
+    .interview-grid { grid-template-columns: 1fr; gap: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="breadcrumb"><a href="#">Home</a><span>›</span><a href="#">News & Events</a><span>›</span>My Why Campaign</nav>
+
+<!-- SECTION 1: DARK SPLIT-PANEL HERO
+     REPLACE: Swap .placeholder with YouTube iframe -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-org">HPV Cancers Alliance</div>
+      <h1 class="hero-title">MY WHY</h1>
+      <div class="hero-subtitle">Campaign</div>
+      <div class="hero-line"></div>
+      <p class="hero-desc">Real stories from patients, caregivers, and advocates — sharing why the fight against HPV-related cancers is personal.</p>
+    </div>
+    <div class="hero-video">
+      <div class="placeholder"><div class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div><span>Awaiting YouTube URL</span></div>
+      <div class="hero-video-label">Featured Film</div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-bar">
+  <div class="featured-info">
+    <span class="featured-tag">Long-Form</span>
+    <div><h2>The My Why Story</h2><p>This full-length feature brings together the voices of our community in one powerful narrative about the fight against HPV-related cancers.</p></div>
+  </div>
+</section>
+
+<!-- SECTION 3: INTERVIEWS — REPLACE each .placeholder with YouTube iframe -->
+<section class="interviews">
+  <div class="section-header"><h2>The Interviews</h2><p>Six personal conversations from the people behind the campaign.</p></div>
+  <div class="interview-grid">
+    <div class="interview-card"><div class="interview-video"><div class="placeholder"><div class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div><span>Awaiting URL</span></div></div><div class="interview-body"><div class="interview-number">Interview 01</div><h3>Interviewee Name</h3><p>Brief description of their story.</p></div></div>
+    <div class="interview-card"><div class="interview-video"><div class="placeholder"><div class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div><span>Awaiting URL</span></div></div><div class="interview-body"><div class="interview-number">Interview 02</div><h3>Interviewee Name</h3><p>Brief description of their story.</p></div></div>
+    <div class="interview-card"><div class="interview-video"><div class="placeholder"><div class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div><span>Awaiting URL</span></div></div><div class="interview-body"><div class="interview-number">Interview 03</div><h3>Interviewee Name</h3><p>Brief description of their story.</p></div></div>
+    <div class="interview-card"><div class="interview-video"><div class="placeholder"><div class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div><span>Awaiting URL</span></div></div><div class="interview-body"><div class="interview-number">Interview 04</div><h3>Interviewee Name</h3><p>Brief description of their story.</p></div></div>
+    <div class="interview-card"><div class="interview-video"><div class="placeholder"><div class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div><span>Awaiting URL</span></div></div><div class="interview-body"><div class="interview-number">Interview 05</div><h3>Interviewee Name</h3><p>Brief description of their story.</p></div></div>
+    <div class="interview-card"><div class="interview-video"><div class="placeholder"><div class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div><span>Awaiting URL</span></div></div><div class="interview-body"><div class="interview-number">Interview 06</div><h3>Interviewee Name</h3><p>Brief description of their story.</p></div></div>
+  </div>
+</section>
+
+<section class="cta"><h2>Join the Movement</h2><p>Every story shared is a step toward a future without HPV-related cancers.</p><a href="#" class="cta-btn">Get Involved</a></section>
+
+</body>
+</html>

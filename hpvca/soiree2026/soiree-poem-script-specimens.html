@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soirée — Poem Script Specimens (Placeholder)</title>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&family=Sora:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:#FAF7F2;color:#1E1A2A;padding:40px 32px 100px}
+.page-title{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#9A7B3A;margin-bottom:8px}
+.page-sub{font-size:14px;color:#7A7088;margin-bottom:48px;max-width:680px;line-height:1.7}
+.section{margin-bottom:56px}
+.section-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#5C4080;margin-bottom:24px;padding-bottom:8px;border-bottom:1px solid rgba(92,64,128,.15)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{padding:44px 40px;border:1px solid rgba(200,164,90,.18);position:relative}
+.light{background:#fff}
+.dark{background:#2A1840;border-color:rgba(200,164,90,.25)}
+.dark .headline,.dark .headline span{color:#fff}
+.dark .meta{color:rgba(255,255,255,.7)}
+.dark .venue{color:rgba(255,255,255,.4)}
+.dark .card-id{color:rgba(255,255,255,.3)}
+.dark .card-fonts{color:#C8A45A}
+.dark .note{color:rgba(255,255,255,.3);border-color:rgba(255,255,255,.06)}
+.dark .ps-badge{background:rgba(200,164,90,.15);color:#C8A45A;border-color:rgba(200,164,90,.3)}
+.cream{background:#FBF8F2}
+.gold-bg{background:linear-gradient(135deg,#f5e6c8,#e8cc90);border-color:rgba(154,123,58,.2)}
+.sunset{background:linear-gradient(180deg,#2d1f4e 0%,#7B5BA6 35%,#c49a6c 75%,#e8cc90 100%);border-color:rgba(200,164,90,.2)}
+.sunset .headline,.sunset .headline span{color:#fff}
+.sunset .meta{color:rgba(255,255,255,.8)}
+.sunset .venue{color:rgba(255,255,255,.45)}
+.sunset .card-id{color:rgba(255,255,255,.3)}
+.sunset .card-fonts{color:#E8D5A0}
+.sunset .note{color:rgba(255,255,255,.35);border-color:rgba(255,255,255,.06)}
+.sunset .ps-badge{background:rgba(255,255,255,.12);color:#E8D5A0;border-color:rgba(255,255,255,.2)}
+.card-id{position:absolute;top:14px;right:18px;font-size:10px;color:#7A7088;letter-spacing:.06em;font-weight:500}
+.card-fonts{font-size:10px;color:#9A7B3A;letter-spacing:.06em;text-transform:uppercase;font-weight:500;margin-bottom:20px}
+.headline{line-height:1.1;margin-bottom:16px;color:#1E1A2A}
+.meta{font-size:15px;color:#3D3650;margin-bottom:4px}
+.venue{font-size:12px;color:#7A7088;letter-spacing:.02em}
+.note{font-size:11px;color:#7A7088;margin-top:16px;padding-top:12px;border-top:1px solid rgba(0,0,0,.04);line-height:1.6;font-style:italic}
+.ps-badge{
+display:inline-block;
+font-size:9px;font-weight:600;
+letter-spacing:.1em;text-transform:uppercase;
+color:#5C4080;
+background:rgba(92,64,128,.08);
+border:1px dashed rgba(92,64,128,.25);
+padding:3px 8px;
+margin-bottom:14px;
+}
+.ps-placeholder{
+font-family:'Pinyon Script',cursive;
+position:relative;
+}
+.ps-placeholder::after{
+content:'poem script';
+position:absolute;
+bottom:-2px;right:0;
+font-family:'DM Sans',sans-serif;
+font-size:8px;
+font-style:normal;
+letter-spacing:.1em;
+text-transform:uppercase;
+color:#C8A45A;
+opacity:.6;
+}
+.full-w{grid-column:1/-1}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="page-title">Poem Script — placeholder specimens for client presentation</div>
+<div class="page-sub">Pinyon Script used as visual stand-in. Final versions would use Poem Script Pro (Sudtipos, ~$40 desktop license). The reversed-stress letterforms will look distinctly different — more ornamental, with shading opposite to conventional scripts. Badges mark where Poem Script renders.</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- SECTION 1: FULL HEADLINE IN POEM SCRIPT -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section">
+<div class="section-label">Full headline in Poem Script</div>
+<div class="grid">
+
+<div class="card light">
+  <div class="card-id">P1</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline ps-placeholder" style="font-family:'Pinyon Script',cursive;font-size:50px">Soirée in the City</div>
+  <div class="meta" style="font-family:'DM Sans'">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div class="note">On white. Full script headline. Clean, formal, engraved invitation feel.</div>
+</div>
+
+<div class="card dark">
+  <div class="card-id">P2</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline ps-placeholder" style="font-family:'Pinyon Script',cursive;font-size:50px">Soirée in the City</div>
+  <div class="meta" style="font-family:'DM Sans'">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div class="note">On purple-deep. How it would sit on the actual hero gradient.</div>
+</div>
+
+<div class="card cream">
+  <div class="card-id">P3</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline ps-placeholder" style="font-family:'Pinyon Script',cursive;font-size:50px;color:#2A1840">Soirée in the City</div>
+  <div class="meta" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:#5C4080">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div class="note">On cream with Cormorant Garamond date. Printed invitation feel.</div>
+</div>
+
+<div class="card sunset">
+  <div class="card-id">P4</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline ps-placeholder" style="font-family:'Pinyon Script',cursive;font-size:50px">Soirée in the City</div>
+  <div class="meta" style="font-family:'DM Sans';font-weight:300">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; New York City</div>
+  <div class="note">On sunset gradient. The actual hero background treatment.</div>
+</div>
+
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 2: POEM SCRIPT + "in the" SERIF ITALIC     -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section">
+<div class="section-label">Poem Script "Soirée" + "City" — "in the" in serif italic</div>
+<div class="grid">
+
+<div class="card light">
+  <div class="card-id">P5</div>
+  <div class="card-fonts">Poem Script + Cormorant Garamond italic</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:28px;color:#5C4080;font-weight:300"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div class="meta" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div class="note">Cormorant Garamond light italic for "in the" — classical, understated. The connector reads like a whisper between two flourishes.</div>
+</div>
+
+<div class="card dark">
+  <div class="card-id">P6</div>
+  <div class="card-fonts">Poem Script + Cormorant Garamond italic</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:28px;color:#E8D5A0;font-weight:300"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div class="meta" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; New York City</div>
+  <div class="note">Same pairing on dark. Gold "in the" creates warmth.</div>
+</div>
+
+<div class="card light">
+  <div class="card-id">P7</div>
+  <div class="card-fonts">Poem Script + Playfair Display italic</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:30px;color:#5C4080;font-weight:400"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div class="meta" style="font-family:'Playfair Display',serif;font-style:italic">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div class="note">Playfair Display italic — bolder connector, higher contrast. More editorial tension.</div>
+</div>
+
+<div class="card dark">
+  <div class="card-id">P8</div>
+  <div class="card-fonts">Poem Script + Bodoni Moda italic</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'Bodoni Moda',serif;font-style:italic;font-size:28px;color:#E8D5A0;font-weight:400"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div class="meta" style="font-family:'Bodoni Moda',serif;font-style:italic">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; New York City</div>
+  <div class="note">Bodoni Moda italic — extreme thin/thick contrast. Fashion-magazine energy. Poem Script's reversed stress would play against Bodoni's conventional stress beautifully.</div>
+</div>
+
+<div class="card cream">
+  <div class="card-id">P9</div>
+  <div class="card-fonts">Poem Script + EB Garamond italic</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive;color:#2A1840">Soirée</span>
+    <span style="font-family:'EB Garamond',serif;font-style:italic;font-size:28px;color:#5C4080;font-weight:400"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive;color:#2A1840">City</span>
+  </div>
+  <div class="meta" style="font-family:'EB Garamond',serif;font-style:italic">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div class="note">EB Garamond italic — closest free Garamond. Old-world pairing. Printed stationery feel.</div>
+</div>
+
+<div class="card sunset">
+  <div class="card-id">P10</div>
+  <div class="card-fonts">Poem Script + Noto Serif Display italic</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'Noto Serif Display',serif;font-style:italic;font-size:28px;color:rgba(255,255,255,.65);font-weight:400"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div class="meta" style="font-family:'Noto Serif Display',serif;font-style:italic">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; New York City</div>
+  <div class="note">On sunset gradient. Noto Serif Display — variable weight, excellent screen rendering.</div>
+</div>
+
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 3: POEM SCRIPT + "in the" SANS SERIF       -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section">
+<div class="section-label">Poem Script "Soirée" + "City" — "in the" in sans serif</div>
+<div class="grid">
+
+<div class="card light">
+  <div class="card-id">P11</div>
+  <div class="card-fonts">Poem Script + DM Sans light uppercase</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'DM Sans',sans-serif;font-size:16px;color:#5C4080;font-weight:300;letter-spacing:.14em;text-transform:uppercase"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div class="meta" style="font-family:'DM Sans';font-weight:300">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div class="note">Sans uppercase tracked light — maximum contrast between ornamental and minimal. The "in the" almost disappears.</div>
+</div>
+
+<div class="card dark">
+  <div class="card-id">P12</div>
+  <div class="card-fonts">Poem Script + DM Sans light uppercase</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'DM Sans',sans-serif;font-size:16px;color:#E8D5A0;font-weight:300;letter-spacing:.14em;text-transform:uppercase"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div class="meta" style="font-family:'DM Sans';font-weight:300">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; New York City</div>
+  <div class="note">On dark. Gold sans connector. Sharp, contemporary.</div>
+</div>
+
+<div class="card light">
+  <div class="card-id">P13</div>
+  <div class="card-fonts">Poem Script + Outfit light uppercase</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'Outfit',sans-serif;font-size:16px;color:#5C4080;font-weight:300;letter-spacing:.12em;text-transform:uppercase"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div class="meta" style="font-family:'Outfit';font-weight:300">October 19, 2026</div>
+  <div class="venue" style="font-family:'Outfit';font-weight:300">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div class="note">Outfit — geometric, Gotham-adjacent. More structured sans against the ornamental script.</div>
+</div>
+
+<div class="card dark">
+  <div class="card-id">P14</div>
+  <div class="card-fonts">Poem Script + Sora light uppercase</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'Sora',sans-serif;font-size:15px;color:#E8D5A0;font-weight:300;letter-spacing:.14em;text-transform:uppercase"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div class="meta" style="font-family:'Sora';font-weight:300">October 19, 2026</div>
+  <div class="venue" style="font-family:'Sora';font-weight:300">City Vineyard &middot; New York City</div>
+  <div class="note">Sora — geometric with soft terminals. Slightly warmer than DM Sans.</div>
+</div>
+
+<div class="card light">
+  <div class="card-id">P15</div>
+  <div class="card-fonts">Poem Script + DM Sans lowercase italic</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'DM Sans',sans-serif;font-size:20px;color:#5C4080;font-weight:300;font-style:italic"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div class="meta" style="font-family:'DM Sans';font-weight:300;font-style:italic">October 19, 2026</div>
+  <div class="venue" style="font-family:'DM Sans'">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div class="note">Alternative: sans lowercase italic instead of uppercase. Softer, more conversational connector.</div>
+</div>
+
+<div class="card sunset">
+  <div class="card-id">P16</div>
+  <div class="card-fonts">Poem Script + Manrope light uppercase</div>
+  <div class="ps-badge">Poem Script — placeholder</div>
+  <div class="headline" style="font-size:50px">
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'Manrope',sans-serif;font-size:15px;color:rgba(255,255,255,.55);font-weight:300;letter-spacing:.14em;text-transform:uppercase"> in the </span>
+    <span class="ps-placeholder" style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div class="meta" style="font-family:'Manrope';font-weight:300">October 19, 2026</div>
+  <div class="venue" style="font-family:'Manrope';font-weight:300">City Vineyard &middot; New York City</div>
+  <div class="note">On sunset gradient. Manrope — geometric-humanist. The "in the" ghosts against the gradient while script anchors the headline.</div>
+</div>
+
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 4: HERO MOCKUPS — full layout context       -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section">
+<div class="section-label">Hero mockups — how Poem Script sits in the actual page context</div>
+<div class="grid">
+
+<div class="card dark full-w" style="padding:80px 60px;text-align:center;background:linear-gradient(180deg,#1a1033 0%,#2d1f4e 25%,#4a3070 45%,#7B5BA6 60%,#c49a6c 78%,#e0b87a 90%,#f0cc90 100%);min-height:400px;display:flex;flex-direction:column;justify-content:center;align-items:center">
+  <div class="card-id">P17</div>
+  <div style="font-family:'DM Sans';font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,213,160,.7);margin-bottom:24px">HPV Cancers Alliance presents</div>
+  <div class="ps-badge" style="margin-bottom:20px">Poem Script — placeholder</div>
+  <div style="font-family:'Pinyon Script',cursive;font-size:clamp(3rem,7vw,5.5rem);color:#fff;line-height:1.05;margin-bottom:20px">Soirée in the City</div>
+  <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1rem,2vw,1.4rem);color:rgba(255,255,255,.8);font-weight:300;margin-bottom:8px">October 19, 2026</div>
+  <div style="font-family:'DM Sans';font-size:14px;color:rgba(255,255,255,.45);margin-bottom:36px">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div style="background:#C8A45A;color:#2A1840;padding:14px 36px;font-family:'DM Sans';font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:inline-block">Get Tickets</div>
+  <div class="note" style="max-width:500px;margin-top:28px;text-align:center">Full script headline on gradient. Cormorant Garamond italic date. DM Sans body. Full layout simulation.</div>
+</div>
+
+<div class="card dark full-w" style="padding:80px 60px;text-align:center;background:linear-gradient(180deg,#1a1033 0%,#2d1f4e 25%,#4a3070 45%,#7B5BA6 60%,#c49a6c 78%,#e0b87a 90%,#f0cc90 100%);min-height:400px;display:flex;flex-direction:column;justify-content:center;align-items:center">
+  <div class="card-id">P18</div>
+  <div style="font-family:'DM Sans';font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,213,160,.7);margin-bottom:24px">HPV Cancers Alliance presents</div>
+  <div class="ps-badge" style="margin-bottom:20px">Poem Script — placeholder</div>
+  <div style="font-size:clamp(3rem,7vw,5.5rem);color:#fff;line-height:1.05;margin-bottom:20px">
+    <span style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.5rem,3.5vw,2.8rem);color:#E8D5A0;font-weight:300"> in the </span>
+    <span style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div style="font-family:'DM Sans';font-size:clamp(1rem,2vw,1.3rem);color:rgba(255,255,255,.75);font-weight:300;margin-bottom:8px">October 19, 2026</div>
+  <div style="font-family:'DM Sans';font-size:14px;color:rgba(255,255,255,.45);margin-bottom:36px">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div style="background:#C8A45A;color:#2A1840;padding:14px 36px;font-family:'DM Sans';font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:inline-block">Get Tickets</div>
+  <div class="note" style="max-width:500px;margin-top:28px;text-align:center">Mixed: Poem Script for "Soirée" + "City", Cormorant Garamond italic gold "in the". DM Sans body.</div>
+</div>
+
+<div class="card dark full-w" style="padding:80px 60px;text-align:center;background:linear-gradient(180deg,#1a1033 0%,#2d1f4e 25%,#4a3070 45%,#7B5BA6 60%,#c49a6c 78%,#e0b87a 90%,#f0cc90 100%);min-height:400px;display:flex;flex-direction:column;justify-content:center;align-items:center">
+  <div class="card-id">P19</div>
+  <div style="font-family:'DM Sans';font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,213,160,.7);margin-bottom:24px">HPV Cancers Alliance presents</div>
+  <div class="ps-badge" style="margin-bottom:20px">Poem Script — placeholder</div>
+  <div style="font-size:clamp(3rem,7vw,5.5rem);color:#fff;line-height:1.05;margin-bottom:20px">
+    <span style="font-family:'Pinyon Script',cursive">Soirée</span>
+    <span style="font-family:'DM Sans',sans-serif;font-size:clamp(.8rem,1.5vw,1.1rem);color:#E8D5A0;font-weight:300;letter-spacing:.16em;text-transform:uppercase;vertical-align:middle"> in the </span>
+    <span style="font-family:'Pinyon Script',cursive">City</span>
+  </div>
+  <div style="font-family:'DM Sans';font-size:clamp(1rem,2vw,1.3rem);color:rgba(255,255,255,.75);font-weight:300;margin-bottom:8px">October 19, 2026</div>
+  <div style="font-family:'DM Sans';font-size:14px;color:rgba(255,255,255,.45);margin-bottom:36px">City Vineyard &middot; 233 West Street &middot; New York City</div>
+  <div style="background:#C8A45A;color:#2A1840;padding:14px 36px;font-family:'DM Sans';font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:inline-block">Get Tickets</div>
+  <div class="note" style="max-width:500px;margin-top:28px;text-align:center">Mixed: Poem Script + DM Sans uppercase tracked gold "in the". Maximum script/sans contrast.</div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

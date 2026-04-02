@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soirée in the City 2026 — HPV Cancers Alliance</title>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+/*
+  BRAND PALETTE
+  Deep purple  #3A2458
+  Purple       #5C4080
+  Sky blue     #A8D4F0
+  Gold         #C8A45A
+  Light gold   #E8D5A0
+  Background   #FFFDF8
+
+  4 TYPE STYLES
+  1  Display     Pinyon Script  clamp(4.5rem,12vw,10rem)  normal
+  2  Stat/number               clamp(2.2rem,5vw,3.6rem)  normal
+  3  Caps        13px  bold  letter-spacing .1em  uppercase
+  4  Body        15px  normal  line-height 1.7
+*/
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Trebuchet MS,sans-serif;background:#FFFDF8;color:#5C4080}
+
+/* ======================== */
+/* HERO — split grid        */
+/* ======================== */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:100vh;
+  background:#FFFDF8;
+}
+
+/* — LEFT COLUMN — */
+.hero-left{
+  padding:clamp(40px,6vw,80px) clamp(32px,5vw,64px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* Style 3 — caps */
+.caps{font-size:13px;font-weight:bold;letter-spacing:.1em;text-transform:uppercase}
+
+/* Style 1 — display */
+.hero-title{
+  font-family:'Pinyon Script',cursive;
+  font-size:clamp(4.5rem,12vw,10rem);
+  font-weight:normal;
+  line-height:.95;
+  color:#C8A45A;
+  margin-bottom:clamp(24px,4vw,40px);
+}
+
+/* Style 4 — body */
+.body-text{font-size:15px;line-height:1.7}
+
+/* Left details */
+.hero-eyebrow{color:#5C4080;margin-bottom:clamp(16px,3vw,24px)}
+.hero-date{font-size:15px;color:#5C4080;margin-bottom:4px}
+.hero-time{font-size:15px;color:#5C4080;margin-bottom:6px}
+.hero-venue{font-size:15px;color:#5C4080;margin-bottom:2px}
+.hero-addr{font-size:15px;color:#5C4080;margin-bottom:clamp(24px,4vw,40px)}
+
+/* CTA + counter wrapper */
+.cta-cd-wrap{align-self:flex-start}
+.hero-cta{
+  display:block;
+  text-align:center;
+  padding:16px 40px;
+  background:#5C4080;
+  color:#fff;
+  text-decoration:none;
+  margin-bottom:16px;
+}
+
+/* Style 2 — counter numbers */
+.cd{display:flex;gap:clamp(8px,2vw,16px);align-items:baseline}
+.cd-item{text-align:center}
+.cd-num{font-size:clamp(1.4rem,3vw,2rem);color:#5C4080;line-height:1;margin-bottom:2px}
+.cd-label{color:#5C4080;opacity:.45}
+.cd-sep{font-size:clamp(1.4rem,3vw,2rem);color:#5C4080;opacity:.15;line-height:1}
+
+/* — RIGHT COLUMN — */
+.hero-right{
+  padding:clamp(40px,6vw,80px) clamp(32px,5vw,64px);
+  display:grid;
+  grid-template-columns:1fr;
+  gap:clamp(12px,2vw,20px);
+  align-content:center;
+}
+
+/* Style 2 — stat */
+.stat-num{font-size:clamp(2.2rem,5vw,3.6rem);color:#5C4080;line-height:1}
+
+/* Right-column elements */
+.cr-label{color:#C8A45A;margin-bottom:8px}
+.cr-text{color:#5C4080;opacity:.7}
+.cr-text strong{color:#C8A45A;opacity:1}
+.cr-divider{height:1px;background:rgba(92,64,128,.08)}
+.cr-quote{
+  font-size:15px;
+  font-style:italic;
+  color:#3A2458;
+  line-height:1.7;
+  border-left:2px solid #C8A45A;
+  padding-left:16px;
+}
+.cr-attr{color:#5C4080;opacity:.6;margin-top:6px;font-style:normal}
+
+/* Tickets */
+.cr-tickets{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.cr-ticket{border:1px solid rgba(92,64,128,.1);padding:12px 16px;text-align:center}
+.cr-ticket.featured{border-color:#C8A45A;background:rgba(200,164,90,.06)}
+.cr-ticket-name{color:#3A2458;margin-bottom:4px;white-space:nowrap}
+.cr-ticket-price{font-size:clamp(1.2rem,2.5vw,1.6rem);color:#5C4080;font-weight:bold}
+
+/* Footer line */
+.cr-footer{color:#5C4080;opacity:.35}
+
+/* ======================== */
+/* RESPONSIVE               */
+/* ======================== */
+
+/* Tablet */
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr 1fr}
+  .hero-left,.hero-right{padding:clamp(32px,4vw,48px) clamp(24px,3vw,40px)}
+}
+
+/* Stack */
+@media(max-width:768px){
+  .hero{
+    grid-template-columns:1fr;
+    min-height:auto;
+  }
+  .hero-left{
+    padding:clamp(48px,8vw,80px) clamp(24px,6vw,48px) clamp(32px,4vw,48px);
+    text-align:center;
+    align-items:center;
+  }
+  .cta-cd-wrap{align-self:center;width:100%;max-width:320px}
+  .cd{justify-content:center}
+  .hero-right{
+    padding:clamp(24px,4vw,48px) clamp(24px,6vw,48px) clamp(48px,8vw,80px);
+  }
+  .cr-quote{margin-left:0}
+}
+
+/* Small mobile */
+@media(max-width:480px){
+  .hero-left,.hero-right{padding:32px 20px}
+  .hero-title{font-size:clamp(3.5rem,16vw,5rem)}
+  .cr-tickets{grid-template-columns:1fr}
+  .cr-ticket{display:flex;justify-content:space-between;align-items:center;text-align:left}
+  .cr-ticket-name{margin-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================== -->
+<!-- HERO                     -->
+<!-- ======================== -->
+<section class="hero">
+
+  <div class="hero-left">
+    <div class="caps hero-eyebrow">HPV Cancers Alliance presents</div>
+    <h1 class="hero-title">Soirée<br>in the<br>City</h1>
+    <div class="hero-date body-text">Monday, October 19th, 2026</div>
+    <div class="hero-time body-text">7 – 10 PM</div>
+    <div class="hero-venue body-text">City Vineyard</div>
+    <div class="hero-addr body-text">233 West Street, New York, NY 10013</div>
+    <div class="cta-cd-wrap">
+      <a class="caps hero-cta" href="#">Get Your Tickets →</a>
+      <div class="cd">
+        <div class="cd-item"><div class="cd-num" id="cDd">200</div><div class="caps cd-label">Days</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-item"><div class="cd-num" id="cDh">00</div><div class="caps cd-label">Hrs</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-item"><div class="cd-num" id="cDm">00</div><div class="caps cd-label">Min</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-item"><div class="cd-num" id="cDs">00</div><div class="caps cd-label">Sec</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div>
+      <div class="stat-num" style="margin-bottom:8px">5%</div>
+      <div class="body-text cr-text">of all cancers worldwide are caused by HPV. Almost all of them are&nbsp;preventable.</div>
+    </div>
+    <div class="cr-divider"></div>
+    <div class="cr-quote body-text">
+      "No one should face an HPV-related cancer diagnosis alone. That conviction is what started this movement."
+      <div class="caps cr-attr">Lillian Kreppel, Co-Founder &amp; CEO</div>
+    </div>
+    <div class="cr-quote body-text" style="margin-top:4px">
+      "Early detection and vaccination can prevent nearly all HPV cancers. We have the science — now we need the will."
+      <div class="caps cr-attr">Marcia Cross, Co-Founder</div>
+    </div>
+    <div class="cr-divider"></div>
+    <div>
+      <div class="caps cr-label">The Evening</div>
+      <div class="body-text cr-text">Join fellow advocates, survivors, and supporters for an unforgettable night overlooking the Hudson River. <strong>Evening Chic — Dress to Celebrate!</strong></div>
+    </div>
+    <div class="cr-divider"></div>
+    <div class="cr-tickets">
+      <div class="cr-ticket"><div class="caps cr-ticket-name">Individual</div><div class="cr-ticket-price">$350</div></div>
+      <div class="cr-ticket featured"><div class="caps cr-ticket-name">VIP</div><div class="cr-ticket-price">$500</div></div>
+      <div class="cr-ticket"><div class="caps cr-ticket-name">Table of 10</div><div class="cr-ticket-price">$5,000</div></div>
+    </div>
+    <div class="body-text cr-footer">HPVCA is a 501(c)(3) nonprofit. Founded by Marcia Cross and Lillian Kreppel.</div>
+  </div>
+
+</section>
+
+<!-- bottom sections will go here -->
+
+<script>
+(function(){
+  var target=new Date('2026-10-19T19:00:00-04:00').getTime();
+  function pad(n){return n<10?'0'+n:n}
+  function tick(){
+    var now=Date.now(),diff=Math.max(0,target-now);
+    var d=Math.floor(diff/864e5),h=Math.floor(diff%864e5/36e5),m=Math.floor(diff%36e5/6e4),s=Math.floor(diff%6e4/1e3);
+    var de=document.getElementById('cDd'),he=document.getElementById('cDh'),me=document.getElementById('cDm'),se=document.getElementById('cDs');
+    if(de){de.textContent=d;he.textContent=pad(h);me.textContent=pad(m);se.textContent=pad(s)}
+  }
+  setInterval(tick,1000);
+  tick();
+})();
+</script>
+</body>
+</html>

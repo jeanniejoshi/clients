@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soirée Banner: Prismatic Gradients</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Helvetica Neue',system-ui,sans-serif;color:#2D3E50;background:#111;padding:2rem}
+.pg{max-width:900px;margin:0 auto}
+.label{font-size:1rem;color:#FFF;margin:2.5rem 0 .3rem;padding-top:2rem;border-top:1px solid #333}
+.desc{font-size:.72rem;color:#999;margin-bottom:1rem}
+.banner{width:100%;padding:3rem 2rem;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;margin-bottom:.5rem}
+.banner h2{font-size:1.8rem;font-weight:300;color:#FFF;letter-spacing:.15em;text-transform:uppercase}
+.banner p{font-size:.75rem;color:rgba(255,255,255,.8);letter-spacing:.08em}
+@keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes glow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.15)}}
+</style>
+</head>
+<body>
+<div class="pg">
+
+<div style="font-size:1.3rem;color:#FFF;margin-bottom:2rem">Soirée in the City: Prismatic Banners</div>
+<div style="font-size:.72rem;color:#999;margin-bottom:2rem">HPVCA brand purple (#7B5BA6) as the anchor. Sunset chroma radiating through coral, gold, rose, and violet.</div>
+
+
+<!-- 1: CLASSIC SUNSET -->
+<div class="label" style="border-top:none;padding-top:0">1. Classic Sunset</div>
+<div class="desc">Purple at edges, coral and gold at center. Horizontal horizon line effect.</div>
+<div class="banner" style="background:linear-gradient(180deg, #5C4080 0%, #7B5BA6 20%, #C47A9B 40%, #F4A27F 55%, #F8D89C 65%, #F4A27F 75%, #7B5BA6 90%, #5C4080 100%)">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 2: LEFT-RIGHT PRISMATIC -->
+<div class="label">2. Prismatic Sweep</div>
+<div class="desc">Purple to coral to gold to violet. Horizontal sweep like light through a prism.</div>
+<div class="banner" style="background:linear-gradient(90deg, #5C4080, #7B5BA6, #9B7BC4, #C47A9B, #F4A27F, #F8D89C, #F4A27F, #C47A9B, #9B7BC4, #7B5BA6, #5C4080)">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 3: ANIMATED AURORA -->
+<div class="label">3. Animated Aurora</div>
+<div class="desc">Slow-moving prismatic gradient. Living, breathing color. Purple base with sunset glow traveling through.</div>
+<div class="banner" style="background:linear-gradient(135deg, #5C4080, #7B5BA6, #C47A9B, #F4A27F, #F8D89C, #E8C46A, #F4A27F, #9B7BC4, #5C4080, #7B5BA6, #C47A9B, #F4A27F);background-size:400% 400%;animation:shimmer 12s ease infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 4: RADIAL SUNSET -->
+<div class="label">4. Radial Sunset</div>
+<div class="desc">Gold center radiating out through coral, rose, into deep purple. Like the sun setting into night.</div>
+<div class="banner" style="background:radial-gradient(ellipse at 50% 60%, #F8D89C 0%, #F4A27F 25%, #C47A9B 45%, #9B7BC4 65%, #7B5BA6 80%, #5C4080 100%)">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 5: DUOTONE GLOW -->
+<div class="label">5. Duotone Glow</div>
+<div class="desc">Deep purple with a single warm glow in the center. Minimal. The coral breathes against the purple like city lights at dusk.</div>
+<div class="banner" style="background:radial-gradient(ellipse at 50% 50%, #F4A27F 0%, #C47A9B 30%, #7B5BA6 60%, #5C4080 100%);animation:glow 6s ease-in-out infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 6: DIAGONAL CHROMA -->
+<div class="label">6. Diagonal Chroma</div>
+<div class="desc">45-degree sweep. Purple bottom-left to gold top-right. Like sunset light falling across a building.</div>
+<div class="banner" style="background:linear-gradient(135deg, #3D2A5C 0%, #5C4080 15%, #7B5BA6 30%, #9B7BC4 42%, #C47A9B 54%, #F4A27F 66%, #F8D89C 78%, #FAECD2 90%, #FFFFFF 100%)">
+<h2 style="color:#5C4080">Soirée in the City</h2>
+<p style="color:rgba(92,64,128,.7)">October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 7: STACKED BANDS -->
+<div class="label">7. Stacked Bands</div>
+<div class="desc">Distinct horizontal color bands like a sunset sky. Each band is a HPVCA color at full saturation.</div>
+<div class="banner" style="background:linear-gradient(180deg, #5C4080 0%, #5C4080 16%, #7B5BA6 16%, #7B5BA6 32%, #9B7BC4 32%, #9B7BC4 48%, #C47A9B 48%, #C47A9B 64%, #F4A27F 64%, #F4A27F 80%, #F8D89C 80%, #F8D89C 100%)">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 8: MESH GRADIENT -->
+<div class="label">8. Mesh Gradient</div>
+<div class="desc">Multiple radial gradients overlapping. Organic, painterly. Like watercolor bleeding through purple and coral.</div>
+<div class="banner" style="background:#5C4080;background-image:radial-gradient(ellipse at 20% 30%, #9B7BC4 0%, transparent 50%),radial-gradient(ellipse at 80% 20%, #F4A27F 0%, transparent 40%),radial-gradient(ellipse at 50% 80%, #F8D89C 0%, transparent 45%),radial-gradient(ellipse at 10% 80%, #7B5BA6 0%, transparent 50%),radial-gradient(ellipse at 90% 70%, #C47A9B 0%, transparent 40%)">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+</div>
+</body>
+</html>

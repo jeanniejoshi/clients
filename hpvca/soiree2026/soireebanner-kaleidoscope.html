@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soirée Banner: Kaleidoscope Options</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Helvetica Neue',system-ui,sans-serif;background:#111;padding:2rem}
+.pg{max-width:900px;margin:0 auto}
+.label{font-size:1rem;color:#FFF;margin:2.5rem 0 .3rem}
+.desc{font-size:.72rem;color:#999;margin-bottom:1rem}
+.banner{width:100%;min-height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;position:relative;overflow:hidden}
+.banner h2{font-size:1.8rem;font-weight:300;color:#FFF;letter-spacing:.15em;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,.3);position:relative;z-index:2}
+.banner p{font-size:.75rem;color:rgba(255,255,255,.85);letter-spacing:.08em;position:relative;z-index:2}
+
+@keyframes spin{0%{transform:translate(-50%,-50%) rotate(0deg)}100%{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes counterspin{0%{transform:translate(-50%,-50%) rotate(0deg)}100%{transform:translate(-50%,-50%) rotate(-360deg)}}
+@keyframes pulse-scale{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.3)}}
+@keyframes drift{0%{transform:translate(-50%,-50%) rotate(0deg) scale(1)}33%{transform:translate(-40%,-60%) rotate(120deg) scale(1.1)}66%{transform:translate(-60%,-40%) rotate(240deg) scale(.9)}100%{transform:translate(-50%,-50%) rotate(360deg) scale(1)}}
+@keyframes orbit1{0%{transform:translate(-50%,-50%) rotate(0deg) translateX(80px) rotate(0deg)}100%{transform:translate(-50%,-50%) rotate(360deg) translateX(80px) rotate(-360deg)}}
+@keyframes orbit2{0%{transform:translate(-50%,-50%) rotate(120deg) translateX(100px) rotate(-120deg)}100%{transform:translate(-50%,-50%) rotate(480deg) translateX(100px) rotate(-480deg)}}
+@keyframes orbit3{0%{transform:translate(-50%,-50%) rotate(240deg) translateX(60px) rotate(-240deg)}100%{transform:translate(-50%,-50%) rotate(600deg) translateX(60px) rotate(-600deg)}}
+</style>
+</head>
+<body>
+<div class="pg">
+
+<div style="font-size:1.3rem;color:#FFF;margin-bottom:2rem">Kaleidoscope Options</div>
+
+
+<!-- 3: ROTATING CONIC -->
+<div class="label" style="margin-top:0">3. Spinning Prism</div>
+<div class="desc">Conic gradient rotating slowly. Like looking through a turning gemstone.</div>
+<div class="banner" style="background:#5C4080">
+<div style="position:absolute;top:50%;left:50%;width:200%;height:200%;background:conic-gradient(from 0deg, #5C4080, #7B5BA6, #9B7BC4, #C47A9B, #F4A27F, #F8D89C, #F4A27F, #C47A9B, #9B7BC4, #7B5BA6, #5C4080);animation:spin 20s linear infinite;opacity:.85"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 4: DOUBLE SPIN -->
+<div class="label">4. Double Spin</div>
+<div class="desc">Two conic gradients rotating opposite directions. Moiré-like interference pattern. Hypnotic.</div>
+<div class="banner" style="background:#3D2A5C">
+<div style="position:absolute;top:50%;left:50%;width:200%;height:200%;background:conic-gradient(from 0deg, #5C4080, #7B5BA6, #9B7BC4, transparent, #C47A9B, #F4A27F, transparent, #F8D89C, #F4A27F, #C47A9B, transparent, #9B7BC4, #7B5BA6, #5C4080);animation:spin 16s linear infinite;opacity:.7"></div>
+<div style="position:absolute;top:50%;left:50%;width:180%;height:180%;background:conic-gradient(from 180deg, transparent, #F8D89C, #F4A27F, transparent, #C47A9B, #9B7BC4, transparent, #7B5BA6, #5C4080, transparent, #7B5BA6, #9B7BC4);animation:counterspin 22s linear infinite;opacity:.6"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 5: ORBITING BLOBS -->
+<div class="label">5. Orbiting Sunset</div>
+<div class="desc">Soft color blobs orbiting a center point. Like planets of light circling each other. Dreamy.</div>
+<div class="banner" style="background:#3D2A5C">
+<div style="position:absolute;top:50%;left:50%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,#F8D89C,transparent 70%);animation:orbit1 14s linear infinite;opacity:.5"></div>
+<div style="position:absolute;top:50%;left:50%;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,#F4A27F,transparent 70%);animation:orbit2 18s linear infinite;opacity:.4"></div>
+<div style="position:absolute;top:50%;left:50%;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,#9B7BC4,transparent 70%);animation:orbit3 12s linear infinite;opacity:.5"></div>
+<div style="position:absolute;top:50%;left:50%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,#C47A9B,transparent 70%);animation:pulse-scale 8s ease-in-out infinite;opacity:.4"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 6: FACETED GEM -->
+<div class="label">6. Faceted Gem</div>
+<div class="desc">Multiple conic slices at different angles, like light hitting a cut diamond. Each facet shifts independently.</div>
+<div class="banner" style="background:#5C4080">
+<div style="position:absolute;top:50%;left:50%;width:250%;height:250%;background:conic-gradient(from 0deg at 30% 40%, #5C4080, #F8D89C 30%, #5C4080 60%, #F4A27F 80%, #5C4080);animation:spin 24s linear infinite;opacity:.5"></div>
+<div style="position:absolute;top:50%;left:50%;width:200%;height:200%;background:conic-gradient(from 90deg at 60% 50%, transparent, #9B7BC4 20%, transparent 40%, #C47A9B 60%, transparent 80%);animation:counterspin 18s linear infinite;opacity:.6"></div>
+<div style="position:absolute;top:50%;left:50%;width:180%;height:180%;background:conic-gradient(from 45deg at 50% 60%, transparent, #F4A27F 15%, transparent 30%, #F8D89C 50%, transparent 65%, #7B5BA6 80%, transparent);animation:spin 30s linear infinite;opacity:.4"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+</div>
+</body>
+</html>

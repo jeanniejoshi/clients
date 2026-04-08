@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soirée Banner: Soft Kaleidoscope</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Helvetica Neue',system-ui,sans-serif;background:#111;padding:2rem}
+.pg{max-width:900px;margin:0 auto}
+.label{font-size:1rem;color:#FFF;margin:2.5rem 0 .3rem}
+.desc{font-size:.72rem;color:#999;margin-bottom:1rem}
+.banner{width:100%;min-height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;position:relative;overflow:hidden}
+.banner h2{font-size:1.8rem;font-weight:300;color:#FFF;letter-spacing:.15em;text-transform:uppercase;text-shadow:0 2px 16px rgba(0,0,0,.3);position:relative;z-index:2}
+.banner p{font-size:.75rem;color:rgba(255,255,255,.85);letter-spacing:.08em;position:relative;z-index:2}
+.layer{position:absolute;top:50%;left:50%;border-radius:50%}
+
+@keyframes spin{0%{transform:translate(-50%,-50%) rotate(0deg)}100%{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes counterspin{0%{transform:translate(-50%,-50%) rotate(0deg)}100%{transform:translate(-50%,-50%) rotate(-360deg)}}
+@keyframes drift1{0%{transform:translate(-50%,-50%) rotate(0deg) scale(1)}33%{transform:translate(-45%,-55%) rotate(60deg) scale(1.1)}66%{transform:translate(-55%,-45%) rotate(120deg) scale(.95)}100%{transform:translate(-50%,-50%) rotate(180deg) scale(1)}}
+@keyframes drift2{0%{transform:translate(-50%,-50%) rotate(0deg) scale(1)}50%{transform:translate(-55%,-45%) rotate(-90deg) scale(1.15)}100%{transform:translate(-50%,-50%) rotate(-180deg) scale(1)}}
+@keyframes drift3{0%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.2)}100%{transform:translate(-50%,-50%) scale(1)}}
+@keyframes wander1{0%{transform:translate(-60%,-40%)}33%{transform:translate(-40%,-60%)}66%{transform:translate(-55%,-50%)}100%{transform:translate(-60%,-40%)}}
+@keyframes wander2{0%{transform:translate(-40%,-55%)}33%{transform:translate(-55%,-35%)}66%{transform:translate(-45%,-60%)}100%{transform:translate(-40%,-55%)}}
+@keyframes wander3{0%{transform:translate(-50%,-50%)}33%{transform:translate(-60%,-45%)}66%{transform:translate(-40%,-55%)}100%{transform:translate(-50%,-50%)}}
+</style>
+</head>
+<body>
+<div class="pg">
+
+<div style="font-size:1.3rem;color:#FFF;margin-bottom:2rem">Soft Kaleidoscope</div>
+
+
+<!-- 3: SOFT SPINNING PRISM -->
+<div class="label" style="margin-top:0">3. Soft Prism</div>
+<div class="desc">Blurred conic gradient, slow rotation. No hard edges. Watercolor through glass.</div>
+<div class="banner" style="background:#5C4080">
+<div class="layer" style="width:250%;height:250%;background:conic-gradient(from 0deg,
+#5C4080, #6A4D93, #7B5BA6, #8B6AB3, #9B7BC4,
+#AD85BF, #BF8CB5, #C47A9B, #D48A8E, #E89685,
+#F4A27F, #F6B48A, #F8C698, #F8D89C, #FAE2AA,
+#F8D89C, #F8C698, #F4A27F, #D48A8E, #C47A9B,
+#AD85BF, #9B7BC4, #7B5BA6, #5C4080
+);filter:blur(40px);animation:spin 24s linear infinite;opacity:.8"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 4: SOFT DOUBLE SPIN -->
+<div class="label">4. Double Bloom</div>
+<div class="desc">Two blurred conics counter-rotating. Colors melt into each other. Flower-like.</div>
+<div class="banner" style="background:#3D2A5C">
+<div class="layer" style="width:250%;height:250%;background:conic-gradient(from 0deg,
+#5C4080, #7B5BA6, #9B7BC4, #C47A9B, #F4A27F, #F8D89C,
+#F4A27F, #C47A9B, #9B7BC4, #7B5BA6, #5C4080
+);filter:blur(50px);animation:drift1 20s ease-in-out infinite alternate;opacity:.7"></div>
+<div class="layer" style="width:220%;height:220%;background:conic-gradient(from 180deg,
+#F8D89C, #F4A27F, #C47A9B, #9B7BC4, #7B5BA6, #5C4080,
+#7B5BA6, #9B7BC4, #C47A9B, #F4A27F, #F8D89C
+);filter:blur(50px);animation:drift2 16s ease-in-out infinite alternate;opacity:.6"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 5: WANDERING CLOUDS -->
+<div class="label">5. Wandering Clouds</div>
+<div class="desc">Soft radial blobs drifting independently. No rotation, just floating color. Like sunset clouds dissolving.</div>
+<div class="banner" style="background:#3D2A5C">
+<div class="layer" style="width:500px;height:500px;background:radial-gradient(circle,#F8D89C 0%,transparent 60%);filter:blur(60px);animation:wander1 18s ease-in-out infinite;opacity:.45"></div>
+<div class="layer" style="width:550px;height:550px;background:radial-gradient(circle,#F4A27F 0%,transparent 60%);filter:blur(70px);animation:wander2 22s ease-in-out infinite;opacity:.4"></div>
+<div class="layer" style="width:450px;height:450px;background:radial-gradient(circle,#9B7BC4 0%,transparent 60%);filter:blur(60px);animation:wander3 15s ease-in-out infinite;opacity:.45"></div>
+<div class="layer" style="width:400px;height:400px;background:radial-gradient(circle,#C47A9B 0%,transparent 60%);filter:blur(55px);animation:drift3 12s ease-in-out infinite;opacity:.35"></div>
+<div class="layer" style="width:350px;height:350px;background:radial-gradient(circle,#7B5BA6 0%,transparent 60%);filter:blur(50px);animation:wander1 20s ease-in-out infinite reverse;opacity:.3"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 6: SOFT FACETS -->
+<div class="label">6. Prismatic Melt</div>
+<div class="desc">Three blurred conic layers at different speeds and scales. Like stained glass seen through frosted water.</div>
+<div class="banner" style="background:#5C4080">
+<div class="layer" style="width:280%;height:280%;background:conic-gradient(from 0deg at 35% 45%,
+#5C4080, #9B7BC4, #F8D89C, #5C4080, #C47A9B, #5C4080
+);filter:blur(60px);animation:spin 30s linear infinite;opacity:.45"></div>
+<div class="layer" style="width:240%;height:240%;background:conic-gradient(from 120deg at 55% 50%,
+#F4A27F, #7B5BA6, #F4A27F, #9B7BC4, #F8D89C, #C47A9B
+);filter:blur(55px);animation:counterspin 22s linear infinite;opacity:.4"></div>
+<div class="layer" style="width:200%;height:200%;background:conic-gradient(from 60deg at 50% 55%,
+#C47A9B, #F8D89C, #7B5BA6, #F4A27F, #9B7BC4, #5C4080
+);filter:blur(50px);animation:spin 36s linear infinite;opacity:.35"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+</div>
+</body>
+</html>

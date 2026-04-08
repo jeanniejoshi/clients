@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soirée Banner: Two Animated</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Helvetica Neue',system-ui,sans-serif;background:#111;padding:2rem}
+.pg{max-width:900px;margin:0 auto}
+.label{font-size:1rem;color:#FFF;margin:2.5rem 0 .3rem}
+.desc{font-size:.72rem;color:#999;margin-bottom:1rem}
+.banner{width:100%;min-height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem}
+.banner h2{font-size:1.8rem;font-weight:300;color:#FFF;letter-spacing:.15em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.15)}
+.banner p{font-size:.75rem;color:rgba(255,255,255,.85);letter-spacing:.08em}
+@keyframes sweep-lr{0%{background-position:0% 0%}100%{background-position:200% 0%}}
+@keyframes sweep-tb{0%{background-position:0% 0%}100%{background-position:0% 200%}}
+</style>
+</head>
+<body>
+<div class="pg">
+
+<div class="label" style="margin-top:0">1. Left to Right</div>
+<div class="desc">Prismatic sunset sweeping horizontally. 300px deep.</div>
+<div class="banner" style="background:linear-gradient(90deg, #5C4080, #7B5BA6, #9B7BC4, #C47A9B, #F4A27F, #F8D89C, #F4A27F, #C47A9B, #9B7BC4, #7B5BA6, #5C4080);background-size:200% 100%;animation:sweep-lr 10s linear infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+<div class="label">2. Top to Bottom</div>
+<div class="desc">Smooth vertical sunset. 28 color stops, no banding. 300px deep.</div>
+<div class="banner" style="background:linear-gradient(180deg,
+#2D1B4E 0%,
+#3D2A5C 4%,
+#4D3670 8%,
+#5C4080 12%,
+#6A4D93 16%,
+#7B5BA6 21%,
+#8B6AB3 26%,
+#9B7BC4 31%,
+#AD85BF 36%,
+#BF8CB5 40%,
+#C47A9B 44%,
+#D48A8E 48%,
+#E89685 52%,
+#F4A27F 56%,
+#F6B48A 60%,
+#F8C698 64%,
+#F8D89C 68%,
+#FAE2AA 72%,
+#FAEBB8 76%,
+#F8D89C 80%,
+#F4C48E 83%,
+#F4A27F 86%,
+#D4899A 89%,
+#BF7EAE 92%,
+#9B7BC4 94%,
+#7B5BA6 96%,
+#5C4080 98%,
+#2D1B4E 100%
+);background-size:100% 200%;animation:sweep-tb 12s linear infinite reverse">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+</div>
+</body>
+</html>

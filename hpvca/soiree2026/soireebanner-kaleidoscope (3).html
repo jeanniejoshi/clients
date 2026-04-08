@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soirée Banner: Soft Kaleidoscope</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Helvetica Neue',system-ui,sans-serif;background:#111;padding:2rem}
+.pg{max-width:900px;margin:0 auto}
+.label{font-size:1rem;color:#FFF;margin:2.5rem 0 .3rem}
+.desc{font-size:.72rem;color:#999;margin-bottom:1rem}
+.banner{width:100%;min-height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;position:relative;overflow:hidden}
+.banner h2{font-size:1.8rem;font-weight:300;color:#FFF;letter-spacing:.15em;text-transform:uppercase;text-shadow:0 2px 16px rgba(0,0,0,.3);position:relative;z-index:2}
+.banner p{font-size:.75rem;color:rgba(255,255,255,.85);letter-spacing:.08em;position:relative;z-index:2}
+
+@keyframes diag{0%{background-position:0% 0%}100%{background-position:200% 200%}}
+@keyframes radial-pulse{0%{background-size:100% 100%}50%{background-size:200% 200%}100%{background-size:100% 100%}}
+@keyframes multi-drift{0%{background-position:0% 0%, 100% 100%, 50% 0%}33%{background-position:100% 50%, 0% 50%, 0% 100%}66%{background-position:50% 100%, 50% 0%, 100% 50%}100%{background-position:0% 0%, 100% 100%, 50% 0%}}
+@keyframes cross-sweep{0%{background-position:0% 0%, 0% 0%}50%{background-position:200% 0%, 0% 200%}100%{background-position:0% 0%, 0% 0%}}
+</style>
+</head>
+<body>
+<div class="pg">
+
+<div style="font-size:1.3rem;color:#FFF;margin-bottom:2rem">Soft Kaleidoscope — Animated</div>
+
+
+<!-- 3: DIAGONAL DRIFT -->
+<div class="label" style="margin-top:0">3. Diagonal Drift</div>
+<div class="desc">Prismatic gradient sweeping corner to corner. Soft colors blending diagonally.</div>
+<div class="banner" style="background:linear-gradient(135deg,
+#2D1B4E, #5C4080, #7B5BA6, #9B7BC4, #BF8CB5,
+#C47A9B, #D48A8E, #F4A27F, #F8C698, #F8D89C,
+#FAE2AA, #F8D89C, #F4A27F, #C47A9B, #9B7BC4,
+#7B5BA6, #5C4080, #2D1B4E, #5C4080, #7B5BA6,
+#C47A9B, #F4A27F, #F8D89C, #F4A27F, #9B7BC4, #5C4080, #2D1B4E
+);background-size:200% 200%;animation:diag 14s linear infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 4: BREATHING RADIAL -->
+<div class="label">4. Breathing Radial</div>
+<div class="desc">Radial sunset gradient that expands and contracts. Like a heartbeat of color.</div>
+<div class="banner" style="background:radial-gradient(ellipse at 50% 50%,
+#FAE2AA 0%, #F8D89C 8%, #F8C698 14%, #F4A27F 22%,
+#D48A8E 30%, #C47A9B 38%, #BF8CB5 44%, #9B7BC4 52%,
+#7B5BA6 62%, #5C4080 74%, #3D2A5C 86%, #2D1B4E 100%
+);background-size:100% 100%;background-position:center;animation:radial-pulse 8s ease-in-out infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 5: WANDERING LAYERS -->
+<div class="label">5. Wandering Layers</div>
+<div class="desc">Three radial gradients drifting independently. Colors bloom and merge unpredictably.</div>
+<div class="banner" style="background-color:#3D2A5C;background-image:
+radial-gradient(ellipse at 50% 50%, #F8D89C, #F4A27F, transparent 60%),
+radial-gradient(ellipse at 50% 50%, #9B7BC4, #C47A9B, transparent 60%),
+radial-gradient(ellipse at 50% 50%, #7B5BA6, #F4A27F, transparent 60%);
+background-size:120% 120%, 140% 140%, 130% 130%;
+animation:multi-drift 16s ease-in-out infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 6: CROSS SWEEP -->
+<div class="label">6. Cross Sweep</div>
+<div class="desc">Horizontal and vertical gradients crossing through each other. Prismatic interference.</div>
+<div class="banner" style="background-color:#5C4080;background-image:
+linear-gradient(90deg, transparent, #5C4080, #9B7BC4, #F4A27F, #F8D89C, #F4A27F, #9B7BC4, #5C4080, transparent),
+linear-gradient(180deg, transparent, #5C4080, #C47A9B, #F8D89C, #F4A27F, #C47A9B, #5C4080, transparent);
+background-size:200% 100%, 100% 200%;
+animation:cross-sweep 12s ease-in-out infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+</div>
+</body>
+</html>

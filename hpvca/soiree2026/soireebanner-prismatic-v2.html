@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soirée Banner: Refined Prismatic</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Helvetica Neue',system-ui,sans-serif;color:#2D3E50;background:#111;padding:2rem}
+.pg{max-width:900px;margin:0 auto}
+.label{font-size:1rem;color:#FFF;margin:2.5rem 0 .3rem;padding-top:2rem;border-top:1px solid #333}
+.desc{font-size:.72rem;color:#999;margin-bottom:1rem}
+.banner{width:100%;padding:3.5rem 2rem;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;margin-bottom:.5rem}
+.banner h2{font-size:1.8rem;font-weight:300;color:#FFF;letter-spacing:.15em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.15)}
+.banner p{font-size:.75rem;color:rgba(255,255,255,.85);letter-spacing:.08em}
+@keyframes aurora{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes sweep{0%{background-position:0% 0%}100%{background-position:200% 0%}}
+@keyframes sunset-rise{0%{background-position:50% 100%}50%{background-position:50% 0%}100%{background-position:50% 100%}}
+@keyframes sunset-glow{0%,100%{filter:saturate(1) brightness(1)}50%{filter:saturate(1.2) brightness(1.1)}}
+</style>
+</head>
+<body>
+<div class="pg">
+
+<div style="font-size:1.3rem;color:#FFF;margin-bottom:2rem">Refined Prismatic Banners</div>
+
+
+<!-- AURORA: ANIMATED -->
+<div class="label" style="border-top:none;padding-top:0">Aurora: Animated</div>
+<div class="desc">Diagonal sweep, slow 12s cycle. Colors drift like northern lights made of sunset.</div>
+<div class="banner" style="background:linear-gradient(135deg, #5C4080, #7B5BA6, #C47A9B, #F4A27F, #F8D89C, #E8C46A, #F4A27F, #9B7BC4, #5C4080, #7B5BA6, #C47A9B, #F4A27F);background-size:400% 400%;animation:aurora 12s ease infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+<!-- AURORA: FASTER, WIDER -->
+<div class="label">Aurora: Wide Sweep</div>
+<div class="desc">Same colors, wider range, 8s cycle. More movement.</div>
+<div class="banner" style="background:linear-gradient(120deg, #3D2A5C, #5C4080, #7B5BA6, #9B7BC4, #D4A0B9, #F4A27F, #F8D89C, #F4A27F, #D4A0B9, #9B7BC4, #7B5BA6, #5C4080, #3D2A5C);background-size:600% 600%;animation:aurora 8s ease infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- SWEEP: ANIMATED -->
+<div class="label">Sweep: Animated</div>
+<div class="desc">Horizontal prismatic band sliding left to right, continuous. Like light refracting endlessly.</div>
+<div class="banner" style="background:linear-gradient(90deg, #5C4080, #7B5BA6, #9B7BC4, #C47A9B, #F4A27F, #F8D89C, #F4A27F, #C47A9B, #9B7BC4, #7B5BA6, #5C4080, #7B5BA6, #9B7BC4, #C47A9B, #F4A27F, #F8D89C);background-size:200% 100%;animation:sweep 10s linear infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+<!-- SWEEP: FLAT -->
+<div class="label">Sweep: Flat</div>
+<div class="desc">Same prismatic band, no animation. Static but luminous.</div>
+<div class="banner" style="background:linear-gradient(90deg, #5C4080, #7B5BA6, #9B7BC4, #C47A9B, #F4A27F, #F8D89C, #F4A27F, #C47A9B, #9B7BC4, #7B5BA6, #5C4080)">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- VERTICAL SUNSET: ANIMATED -->
+<div class="label">Vertical Sunset: Animated</div>
+<div class="desc">Top = deep night purple. Center = coral glow. Bottom = golden horizon. Slow vertical pulse like the sun breathing.</div>
+<div class="banner" style="background:linear-gradient(180deg, #2D1B4E 0%, #5C4080 12%, #7B5BA6 24%, #9B7BC4 36%, #C47A9B 46%, #F4A27F 55%, #F8D89C 64%, #FAE6B8 72%, #F8D89C 78%, #F4A27F 85%, #C47A9B 92%, #7B5BA6 100%);background-size:100% 200%;animation:sunset-rise 10s ease-in-out infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+<!-- VERTICAL SUNSET: ANIMATED + SATURATION PULSE -->
+<div class="label">Vertical Sunset: Glowing</div>
+<div class="desc">Static vertical gradient with a slow saturation and brightness pulse. Like the sky at golden hour, shimmering.</div>
+<div class="banner" style="background:linear-gradient(180deg, #2D1B4E 0%, #5C4080 15%, #7B5BA6 28%, #9B7BC4 40%, #C47A9B 50%, #F4A27F 60%, #F8D89C 72%, #FAE6B8 85%, #FFF5E0 100%);animation:sunset-glow 6s ease-in-out infinite">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+<!-- VERTICAL SUNSET: FLAT -->
+<div class="label">Vertical Sunset: Flat</div>
+<div class="desc">No animation. Deep purple sky at top, golden light at bottom. Classic sunset moment, frozen.</div>
+<div class="banner" style="background:linear-gradient(180deg, #2D1B4E 0%, #5C4080 15%, #7B5BA6 30%, #9B7BC4 42%, #C47A9B 52%, #F4A27F 62%, #F8D89C 75%, #FAE6B8 88%, #FFF5E0 100%)">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+<!-- VERTICAL SUNSET: FLAT COMPACT -->
+<div class="label">Vertical Sunset: Flat, Tight Bands</div>
+<div class="desc">Same colors but compressed in the center. More intensity where the sun hits the horizon.</div>
+<div class="banner" style="background:linear-gradient(180deg, #2D1B4E 0%, #5C4080 20%, #7B5BA6 35%, #C47A9B 45%, #F4A27F 48%, #F8D89C 52%, #F4A27F 55%, #C47A9B 60%, #7B5BA6 75%, #5C4080 90%, #2D1B4E 100%)">
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+</div>
+</body>
+</html>

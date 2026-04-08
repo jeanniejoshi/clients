@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soirée Banner: Kaleidoscope</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Helvetica Neue',system-ui,sans-serif;background:#111;padding:2rem}
+.pg{max-width:900px;margin:0 auto}
+.label{font-size:1rem;color:#FFF;margin:2.5rem 0 .3rem}
+.desc{font-size:.72rem;color:#999;margin-bottom:1rem}
+.banner{width:100%;min-height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;position:relative;overflow:hidden}
+.banner h2{font-size:1.8rem;font-weight:300;color:#FFF;letter-spacing:.15em;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,.3);position:relative;z-index:2}
+.banner p{font-size:.75rem;color:rgba(255,255,255,.85);letter-spacing:.08em;position:relative;z-index:2}
+
+@keyframes spin{0%{transform:translate(-50%,-50%) rotate(0deg)}100%{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes counterspin{0%{transform:translate(-50%,-50%) rotate(0deg)}100%{transform:translate(-50%,-50%) rotate(-360deg)}}
+@keyframes pulse-scale{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.3)}}
+@keyframes orbit1{0%{transform:translate(-50%,-50%) rotate(0deg) translateX(80px) rotate(0deg)}100%{transform:translate(-50%,-50%) rotate(360deg) translateX(80px) rotate(-360deg)}}
+@keyframes orbit2{0%{transform:translate(-50%,-50%) rotate(120deg) translateX(100px) rotate(-120deg)}100%{transform:translate(-50%,-50%) rotate(480deg) translateX(100px) rotate(-480deg)}}
+@keyframes orbit3{0%{transform:translate(-50%,-50%) rotate(240deg) translateX(60px) rotate(-240deg)}100%{transform:translate(-50%,-50%) rotate(600deg) translateX(60px) rotate(-600deg)}}
+</style>
+</head>
+<body>
+<div class="pg">
+
+<div style="font-size:1.3rem;color:#FFF;margin-bottom:2rem">Kaleidoscope — Softer Shapes</div>
+
+
+<!-- 3: SPINNING PRISM — more color stops for smoother transitions -->
+<div class="label" style="margin-top:0">3. Spinning Prism</div>
+<div class="desc">Conic gradient with 24 smooth stops. No hard edges between colors.</div>
+<div class="banner" style="background:#5C4080">
+<div style="position:absolute;top:50%;left:50%;width:200%;height:200%;border-radius:50%;background:conic-gradient(from 0deg,
+#5C4080, #6A4D93, #7B5BA6, #8B6AB3, #9B7BC4,
+#AD85BF, #BF8CB5, #C47A9B, #D48A8E, #E89685,
+#F4A27F, #F6B48A, #F8C698, #F8D89C, #FAE2AA,
+#F8D89C, #F8C698, #F4A27F, #D48A8E, #C47A9B,
+#AD85BF, #9B7BC4, #7B5BA6, #5C4080
+);opacity:.85;animation:spin 20s linear infinite"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 4: DOUBLE SPIN — smoother gradients, more stops -->
+<div class="label">4. Double Spin</div>
+<div class="desc">Two layers counter-rotating. More color stops so the overlap is creamy, not striped.</div>
+<div class="banner" style="background:#3D2A5C">
+<div style="position:absolute;top:50%;left:50%;width:200%;height:200%;border-radius:50%;background:conic-gradient(from 0deg,
+#5C4080, #6A4D93, #7B5BA6, #8B6AB3, #9B7BC4,
+#AD85BF, #C47A9B 30%, #D48A8E, #F4A27F 45%,
+#F8C698, #F8D89C 55%, #F8C698,
+#F4A27F 65%, #C47A9B, #9B7BC4 80%,
+#7B5BA6, #5C4080
+);opacity:.7;animation:spin 16s linear infinite"></div>
+<div style="position:absolute;top:50%;left:50%;width:180%;height:180%;border-radius:50%;background:conic-gradient(from 180deg,
+#F8D89C, #FAE2AA, #F8C698, #F4A27F, #E89685,
+#D48A8E, #C47A9B, #BF8CB5, #AD85BF, #9B7BC4,
+#8B6AB3, #7B5BA6, #6A4D93, #5C4080, #6A4D93,
+#7B5BA6, #9B7BC4, #C47A9B, #F4A27F, #F8D89C
+);opacity:.55;animation:counterspin 22s linear infinite"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 5: ORBITING BLOBS — larger, softer edges -->
+<div class="label">5. Orbiting Sunset</div>
+<div class="desc">Soft color blobs orbiting. Larger with more feathered edges.</div>
+<div class="banner" style="background:#3D2A5C">
+<div style="position:absolute;top:50%;left:50%;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle, #F8D89C 0%, #F8C698 20%, #F4A27F 40%, transparent 70%);animation:orbit1 14s linear infinite;opacity:.5"></div>
+<div style="position:absolute;top:50%;left:50%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle, #F4A27F 0%, #D48A8E 20%, #C47A9B 40%, transparent 70%);animation:orbit2 18s linear infinite;opacity:.4"></div>
+<div style="position:absolute;top:50%;left:50%;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle, #9B7BC4 0%, #AD85BF 20%, #BF8CB5 40%, transparent 70%);animation:orbit3 12s linear infinite;opacity:.5"></div>
+<div style="position:absolute;top:50%;left:50%;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle, #C47A9B 0%, #D48A8E 25%, #E89685 45%, transparent 70%);animation:pulse-scale 8s ease-in-out infinite;opacity:.4"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+<!-- 6: FACETED GEM — smoother conic layers -->
+<div class="label">6. Faceted Gem</div>
+<div class="desc">Three conic layers at different speeds. Smoother stops, same prismatic depth.</div>
+<div class="banner" style="background:#5C4080">
+<div style="position:absolute;top:50%;left:50%;width:250%;height:250%;border-radius:50%;background:conic-gradient(from 0deg at 30% 40%,
+#5C4080, #7B5BA6, #9B7BC4, #F8D89C, #F8C698, #F4A27F,
+#C47A9B, #7B5BA6, #5C4080, #7B5BA6, #C47A9B, #F4A27F, #5C4080
+);opacity:.5;animation:spin 24s linear infinite"></div>
+<div style="position:absolute;top:50%;left:50%;width:200%;height:200%;border-radius:50%;background:conic-gradient(from 90deg at 60% 50%,
+#9B7BC4, #BF8CB5, #C47A9B, #F4A27F, #F8D89C,
+#F4A27F, #9B7BC4, #7B5BA6, #9B7BC4, #F8D89C, #C47A9B
+);opacity:.45;animation:counterspin 18s linear infinite"></div>
+<div style="position:absolute;top:50%;left:50%;width:180%;height:180%;border-radius:50%;background:conic-gradient(from 45deg at 50% 60%,
+#C47A9B, #D48A8E, #F4A27F, #F8D89C, #FAE2AA,
+#F8D89C, #9B7BC4, #7B5BA6, #5C4080, #7B5BA6, #C47A9B
+);opacity:.35;animation:spin 30s linear infinite"></div>
+<h2>Soirée in the City</h2>
+<p>October 19, 2026 · HPV Cancers Alliance</p>
+</div>
+
+
+</div>
+</body>
+</html>
